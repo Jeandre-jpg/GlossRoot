@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @EnvironmentObject var sessionService: SessionServiceImpl
     var body: some View {
         ZStack{
             Color("Pink")
@@ -48,7 +49,7 @@ struct DashboardView: View {
                     .padding(.leading, -170)
                     .padding(.top, 30)
                 
-                Text("JEANDRÈ")
+                Text("UserName")
                     .font(.custom("DreamAvenue", size: 40))
                     .foregroundColor(Color("Black"))
                     .padding(.leading, -170)
@@ -95,15 +96,11 @@ struct DashboardView: View {
                 
                 Spacer()
                
+       
                 Button(action: {
-                    
-                }, label:{
-                    Text("Logout")
-                        .font(.custom("Livvic-Regular", size: 12))
-                        .foregroundColor(Color("Brown"))
-                        .padding(.leading, -170)
-                        .padding(.top, 30)
-                    
+                   // sessionService.logout()
+                },label: {
+                    Text("Log Out")
                 })
                
                 
@@ -118,5 +115,6 @@ struct DashboardView: View {
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardView()
+            .environmentObject(SessionServiceImpl())
     }
 }

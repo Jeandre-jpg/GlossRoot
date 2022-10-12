@@ -8,11 +8,21 @@
 import SwiftUI
 struct SplashView: View {
     @State private var isActive = false
+    @StateObject var sessionService = SessionServiceImpl()
     
     var body: some View {
         
+        
         if isActive{
             OnboardingView()
+            
+//            switch sessionService.state{
+//            case .LoggedIn:
+//                DashboardView()
+//                    .environmentObject(sessionService)
+//            case .LoggedOut:
+//                LoginView()
+//            }
         }else{
         ZStack{
             Color("Pink")

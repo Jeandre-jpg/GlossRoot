@@ -14,14 +14,16 @@ struct OnboardingView: View {
         Boarding(image: "face", title: "Face Scan", description: "For better results, use our skin sensor tool to scan your face and detect areas you need to work on.")
     ]
 
-
+    
     @State var offset: CGFloat = 0
     var body: some View {
             
+        ZStack{
+            Color("Pink")
+                .ignoresSafeArea()
+            
             OffsetTab(offset: $offset){
-                ZStack{
-                    Color("Pink")
-                        .ignoresSafeArea()
+              
                     
                     
                 HStack(spacing: 0){
@@ -88,19 +90,20 @@ struct OnboardingView: View {
                             .frame(width: 270, height: 100, alignment: .center)
                             
                         }
+                        .ignoresSafeArea(.container, edges: .all)
                         .frame(width: getScreenBounds().width)
                         .frame(maxHeight: .infinity)
                         
                     }
                 }
+                .background(Color("Pink"))
                
                 
-            }//ZStack
-                .ignoresSafeArea(.container, edges: .all)
+
                 
                 
-        }
-            .ignoresSafeArea(.container, edges: .all)
+        }//Offset
+            .ignoresSafeArea()
             .overlay(
                 VStack{
                     
@@ -165,8 +168,14 @@ struct OnboardingView: View {
                     .padding()
                     ,alignment: .bottom
                 
+        
             )
-    }
+            
+        }//Zstack
+       
+            
+    }//Offset
+        
     
     func getIndex()->Int{
         let progress = (offset / getScreenBounds().width).rounded()
