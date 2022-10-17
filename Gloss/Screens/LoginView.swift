@@ -6,15 +6,46 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct LoginView: View {
+    
+    @StateObject var vm = AuthManage()
+
+    
+    @State var userIsLoggedIn: Bool = false
     @State var offset: CGFloat = 0
     @State private var password: String = ""
     @State private var email: String = ""
+    
+    
+    @State var isLoading: Bool = true
+    
+    @State var errorMessage = ""
+    @State var showingAlert = false
+    @State var errorTitle = "Oh No!"
+    
+    func errorCheck() -> String? {
+        if email.trimmingCharacters(in: .whitespaces).isEmpty || password.trimmingCharacters(in: .whitespaces).isEmpty
+            {
+            return "Please fill in all required info"
+        }
+        return nil
+    }
 
     
     var body: some View {
-        VStack{
+
+        if userIsLoggedIn{
+            DashboardView()
+        }else{
+            content
+        }
+    }
+
+    var content: some View{
+        ZStack{
             VStack{
                 Image("Add")
                     .resizable()
@@ -27,9 +58,7 @@ struct LoginView: View {
                     .foregroundColor(Color("Black"))
                     .multilineTextAlignment(.center)
                     .padding(.top, 15)
-                
-               
-                
+
                 
                 Text("Welcome back, please enter your details.")
                     .font(.custom("Livvic-Regular", size: 12))
@@ -97,6 +126,7 @@ struct LoginView: View {
                         .foregroundColor(Color("Black"))
                         .multilineTextAlignment(.leading)
                         .padding(.all, 20)
+                        .disableAutocorrection(true)
                         .border(Color("Grey"))
                         .opacity(0.7)
                     
@@ -113,6 +143,7 @@ struct LoginView: View {
                     SecureField("Password", text: $password)
                         .font(.custom("Livvic-Medium", size: 12))
                         .foregroundColor(Color("Black"))
+                        .disableAutocorrection(true)
                         .multilineTextAlignment(.leading)
                         .padding(.all, 20)
                         .border(Color("Grey"))
@@ -141,14 +172,10 @@ struct LoginView: View {
                 
                 
                     
-                    
-                    
-                    Button{
-                        offset = min(offset + getScreenBounds().width * 2,
-                                     getScreenBounds().width * 2)
+                    Button(action: {
+                        vm.signIn(email: email, password: password)
                         
-                        
-                    }label: {
+                    }, label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 30)
                                 .fill(Color("Brown"))
@@ -156,27 +183,20 @@ struct LoginView: View {
                                 .padding(.top, 20)
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             
-                            NavigationLink(destination:
-                                            DashboardView()
-                                .navigationBarBackButtonHidden(true)){
+                   
                                     Text("Log In")
                                         .font(.custom("Livvic-SemiBoldItalic", size: 15))
                                         .foregroundColor(Color("White"))
                                         .padding(.top, 20)
                                         .multilineTextAlignment(.center)
                                     
-                                }//Nav
-                            
-                            
+
                         }//ZStack
-                    }//Button
+                    })//Button
                     
-                    Button{
-                        offset = min(offset + getScreenBounds().width * 2,
-                                     getScreenBounds().width * 2)
-                    }label: {
+                
                         NavigationLink(destination:
-                                        BoardingRegister()
+                                        DashboardView()
                             .navigationBarBackButtonHidden(true)){
                        
                                 Text("Don’t have an account? Sign Up")
@@ -186,7 +206,7 @@ struct LoginView: View {
                                     .padding(.top, 10)
                                     .padding(.bottom, 10)
                             }//Nav
-                    }//Button
+                  
                 }//VStack
                     
                 }//VStack
@@ -197,11 +217,21 @@ struct LoginView: View {
                 
                 
                 
-            }//VStack
+            }//ZStack
+        .onAppear{
+            Auth.auth().addStateDidChangeListener{auth, user in
+                if user != nil {
+                    userIsLoggedIn.toggle()
+                }
+            }
+        }
             .frame(width: getScreenBounds().width)
             .frame(maxHeight: .infinity)
             .background(Color("Pink").ignoresSafeArea())
-        }
+            
+
+    }
+    
     }
 
 

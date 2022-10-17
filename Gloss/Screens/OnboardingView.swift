@@ -122,10 +122,7 @@ struct OnboardingView: View {
             
             if(getIndex() == 2){
             
-                Button{
-                    offset = min(offset + getScreenBounds().width * 2,
-                        getScreenBounds().width * 2)
-                }label: {
+             
                     ZStack{
                         RoundedRectangle(cornerRadius: 30)
                             .fill(Color("White"))
@@ -141,7 +138,7 @@ struct OnboardingView: View {
                                         .multilineTextAlignment(.center)
                                         .underline()
                                 }
-                    }
+                    
                   
                      
                 }
