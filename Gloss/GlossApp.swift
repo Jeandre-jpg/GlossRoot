@@ -28,7 +28,9 @@ struct GlossApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            FaceScanView()
+            NavigationView{
+                SplashView()
+            }
         }
     }
 }

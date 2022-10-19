@@ -38,7 +38,7 @@ struct LoginView: View {
     var body: some View {
 
         if userIsLoggedIn{
-            DashboardView()
+            DashboardView() 
         }else{
             content
         }
@@ -194,19 +194,20 @@ struct LoginView: View {
                         }//ZStack
                     })//Button
                     
+                    
+                    NavigationLink(destination:
+                                    BoardingRegister()
+                        .navigationBarBackButtonHidden(true)){
+                        Text("Don’t have an account? Sign Up")
+                                .font(.custom("Livvic-Regular", size: 12))
+                                .foregroundColor(Color("Black"))
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 10)
+                                .padding(.bottom, 10)
+                            
+                        }//Nav
+
                 
-                        NavigationLink(destination:
-                                        DashboardView()
-                            .navigationBarBackButtonHidden(true)){
-                       
-                                Text("Don’t have an account? Sign Up")
-                                    .font(.custom("Livvic-Regular", size: 12))
-                                    .foregroundColor(Color("Black"))
-                                    .multilineTextAlignment(.center)
-                                    .padding(.top, 10)
-                                    .padding(.bottom, 10)
-                            }//Nav
-                  
                 }//VStack
                     
                 }//VStack

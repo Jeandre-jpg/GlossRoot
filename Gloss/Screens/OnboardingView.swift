@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
     @State var boarding: [Boarding] = [
         Boarding(image: "welcome", title: "Welcome", description: "We believe in proving the best skin care recommendations for any age, gender, ethnicity"),
         Boarding(image: "search", title: "Search & Discover", description: "We have dedicated set of products and routines hand picked for every skin type."),
@@ -120,34 +121,34 @@ struct OnboardingView: View {
                         }
                         Spacer()
             
-            if(getIndex() == 2){
-            
-             
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color("White"))
-                            .frame(width: 120, height: 50)
-                        
-                        NavigationLink(destination:
-                            LoginView()
+                        if(getIndex() == 2){
+                            
+                            
+                            NavigationLink(destination:
+                                            LoginView()
                                 .navigationBarBackButtonHidden(true)){
-                                    Text("Done")
-                                        .font(.custom("Livvic-Bold", size: 15))
-                                        .foregroundColor(Color("Black"))
-                                        .padding(20)
-                                        .multilineTextAlignment(.center)
-                                        .underline()
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 30)
+                                            .fill(Color("White"))
+                                            .frame(width: 120, height: 50)
+                                        
+                                        
+                                        Text("Done")
+                                            .font(.custom("Livvic-Bold", size: 15))
+                                            .foregroundColor(Color("Black"))
+                                            .padding(20)
+                                            .multilineTextAlignment(.center)
+                                            .underline()
+                                    }
                                 }
-                    
-                  
-                     
-                }
                 
+           
             }else{
                 Button{
                     offset = min(offset + getScreenBounds().width * 2,
                         getScreenBounds().width * 2)
                 }label: {
+                    
                     Text("Find out your skintype")
                        .font(.custom("Livvic-Regular", size: 15))
                        .foregroundColor(Color("Black"))

@@ -34,11 +34,11 @@ struct BoardingRegister: View {
     @State var userIsLoggedIn: Bool = false
     
     var body: some View {
-
+        
         if userIsLoggedIn{
-            content
+            DashboardView()
         }else{
-            BoardingRegister()
+            content
         }
     }
 
@@ -1528,7 +1528,7 @@ struct BoardingRegister: View {
         
             .onAppear{
                 Auth.auth().addStateDidChangeListener{auth, user in
-                    if user == nil {
+                    if user != nil {
                         userIsLoggedIn.toggle()
                     }
                 }

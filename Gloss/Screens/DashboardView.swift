@@ -66,7 +66,7 @@ struct DashboardView: View {
                         .padding(.leading, -170)
                         .padding(.top, 30)
                     
-                    Text("UserName")
+                    Text("JEANDRÈ")
                         .font(.custom("DreamAvenue", size: 40))
                         .foregroundColor(Color("Black"))
                         .padding(.leading, -170)
@@ -88,24 +88,8 @@ struct DashboardView: View {
                             .padding(.leading, -30)
                         
                         VStack(spacing: 30){
-                            
-                            Text("Scan Me")
-                                .rotationEffect(Angle(degrees: 270))
-                                .font(.custom("Livvic-Regular", size: 12))
-                                .foregroundColor(Color("Black"))
-                                .padding(.top, 30)
-                            
-                            Text("Overview")
-                                .rotationEffect(Angle(degrees: 270))
-                                .font(.custom("Livvic-Regular", size: 12))
-                                .foregroundColor(Color("Black"))
-                                .padding(.top, 30)
-                            
-                            Text("Track Me")
-                                .rotationEffect(Angle(degrees: 270))
-                                .font(.custom("Livvic-Regular", size: 12))
-                                .foregroundColor(Color("Black"))
-                                .padding(.top, 30)
+                      
+                        AiTabBarView(optionSelected: self.$optionSelected)
                             
                             
                         }.padding(.leading, 10)
@@ -125,10 +109,19 @@ struct DashboardView: View {
                 }else if self.optionSelected == 2 {
                     ProfileView()
                     
-                    
                 }else if self.optionSelected == 3 {
                     ProfileView()
+                    
+                }else if self.optionSelected == 4 {
+                    FaceScanView()
+                
+                }else if self.optionSelected == 5 {
+                    DashboardView()
+
+                }else if self.optionSelected == 5 {
+                    ProfileView()
                 }
+            
                 
                 
                 Spacer()
@@ -156,11 +149,3 @@ struct DashboardView_Previews: PreviewProvider {
         
     }
 }
-//
-//                Button(action: {
-//                   // sessionService.logout()
-//                },label: {
-//                    Text("Log Out")
-//                })
-               
-                
