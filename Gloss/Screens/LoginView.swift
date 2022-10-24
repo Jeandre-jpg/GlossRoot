@@ -38,7 +38,7 @@ struct LoginView: View {
     var body: some View {
 
         if userIsLoggedIn{
-            DashboardView() 
+            DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
         }else{
             content
         }
@@ -211,6 +211,13 @@ struct LoginView: View {
                 }//VStack
                     
                 }//VStack
+            .onAppear{
+                Auth.auth().addStateDidChangeListener{auth, user in
+                    if user != nil {
+                        userIsLoggedIn.toggle()
+                    }
+                }
+            }
                 .frame(width: getScreenBounds().width)
                 .frame(maxHeight: .infinity)
                 .background(Color("Pink").ignoresSafeArea())
@@ -219,13 +226,7 @@ struct LoginView: View {
                 
                 
             }//ZStack
-        .onAppear{
-            Auth.auth().addStateDidChangeListener{auth, user in
-                if user != nil {
-                    userIsLoggedIn.toggle()
-                }
-            }
-        }
+     
             .frame(width: getScreenBounds().width)
             .frame(maxHeight: .infinity)
             .background(Color("Pink").ignoresSafeArea())

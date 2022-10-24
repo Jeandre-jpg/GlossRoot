@@ -9,11 +9,14 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
+
 struct DashboardView: View {
     
     @State var optionSelected = 0
     @State var userIsLoggedIn: Bool = true
     @StateObject var vm = AuthManage()
+    @State var beauty: Beauty
+    
     
     var body: some View {
 
@@ -35,30 +38,44 @@ struct DashboardView: View {
                     
                     
                     HStack(spacing: 10){
-                        Image("burgermenu")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .padding(1)
                         
-                            .frame(width: 35, height: 35, alignment: .center)
-                        Spacer()
-                        
-                        Image("spotsearch")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .padding(1)
-                        
-                            .frame(width: 35, height: 35, alignment: .center)
-                        
-                        Image("cart")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .padding(1)
-                            .frame(width: 35, height: 35, alignment: .center)
-                        
+                        HStack(spacing: 10){
+                            
+                            
+                            Button(action: {
+                                try? Auth.auth().signOut()
+                            }, label: {
+                                Image("logout")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .padding(1)
+                                    .frame(width: 35, height: 35, alignment: .center)
+                            })
+                            
+                            
+                            Spacer()
+                            
+                            Image("spotsearch")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .padding(1)
+                            
+                                .frame(width: 35, height: 35, alignment: .center)
+                            
+                            NavigationLink(destination:
+                                            BeautyProductsView()
+                                .navigationBarBackButtonHidden(true)){
+                                    Image("cart")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .padding(1)
+                                        .frame(width: 35, height: 35, alignment: .center)
+                                }
+                            
+                        }
+                        .padding(.leading, 20)
+                        .padding(.trailing, 20)
                     }
-                    .padding(.leading, 20)
-                    .padding(.trailing, 20)
                     
                     Text("WELCOME BACK")
                         .font(.custom("Livvic-Regular", size: 12))
@@ -66,17 +83,17 @@ struct DashboardView: View {
                         .padding(.leading, -170)
                         .padding(.top, 30)
                     
-                    Text("JEANDRÈ")
+                    Text(beauty.username)
                         .font(.custom("DreamAvenue", size: 40))
                         .foregroundColor(Color("Black"))
                         .padding(.leading, -170)
-                        .padding(.top, 0)
+                        .padding(.top, 5)
                     
                     Text("TOP PRODUCT")
                         .font(.custom("Livvic-Regular", size: 12))
                         .foregroundColor(Color("Brown"))
                         .padding(.leading, -170)
-                        .padding(.top, 30)
+                        .padding(.top, 20)
                     
                     HStack(spacing: 20){
                         
@@ -96,30 +113,26 @@ struct DashboardView: View {
       
                     }
                     
-                    Button(action: {
-                        try? Auth.auth().signOut()
-                    }, label: {
-                        Text("Sign Out")
-                    })
-                    
+           
+
                     
                 }else if self.optionSelected == 1 {
-                    ProfileView()
+                    SkinProductsView()
                     
                 }else if self.optionSelected == 2 {
-                    ProfileView()
+                    BeautyProductsView()
                     
                 }else if self.optionSelected == 3 {
-                    ProfileView()
+                    EditView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
                     
                 }else if self.optionSelected == 4 {
                     FaceScanView()
                 
                 }else if self.optionSelected == 5 {
-                    DashboardView()
+//                    DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
 
-                }else if self.optionSelected == 5 {
-                    ProfileView()
+                }else if self.optionSelected == 6 {
+                   FaceFilterView()
                 }
             
                 
@@ -131,6 +144,11 @@ struct DashboardView: View {
             .padding(.top, 10)
         }
         .onAppear{
+            
+            FirestoreViewModel.fetchUser(uid: Auth.auth().currentUser?.uid ?? "", onSuccess: {user in
+                self.beauty = user
+            })
+            
             Auth.auth().addStateDidChangeListener{auth, user in
                 if user == nil {
                     userIsLoggedIn.toggle()
@@ -145,7 +163,7 @@ struct DashboardView: View {
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView()
+        DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
         
     }
 }

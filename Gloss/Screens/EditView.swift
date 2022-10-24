@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct EditView: View {
     
@@ -21,6 +23,7 @@ struct EditView: View {
     @State private var skintype = 0
     @State private var skintone = 0
     @State private var skinconcern = 0
+    @State var beauty: Beauty
     
     var body: some View {
         ZStack{
@@ -33,7 +36,7 @@ struct EditView: View {
                                  getScreenBounds().width * 2)
                 }label: {
                     NavigationLink(destination:
-                                    ProfileView()
+                                    DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
                         .navigationBarBackButtonHidden(true)){
                             Image("back")
                                 .resizable()
@@ -44,7 +47,7 @@ struct EditView: View {
                         }
                 }
                 
-                Text("EDIT")
+                Text("Profile")
                     .font(.custom("DreamAvenue", size: 40))
                     .foregroundColor(Color("Black"))
                     .padding(.leading, -170)
@@ -67,7 +70,7 @@ struct EditView: View {
                     
                     VStack{
                         
-                        Text("Firstname *")
+                        Text("Username")
                             .font(.custom("Livvic-Medium", size: 15))
                             .foregroundColor(Color("Brown"))
                             .padding(.top, 5)
@@ -77,7 +80,7 @@ struct EditView: View {
                         HStack{
                             
                             
-                            Text(username)
+                            Text(beauty.username)
                                 .font(.custom("Livvic-Medium", size: 15))
                                 .foregroundColor(Color("Brown"))
                                 .padding(.leading, 10)
@@ -86,10 +89,7 @@ struct EditView: View {
                             
                         }
                         
-                        .frame(width: 120, height: 15)
-                        .padding(.all, 20)
-                        .border(Color("Grey"))
-                        .opacity(0.7)
+                       
                         
                         
                     }
@@ -108,7 +108,7 @@ struct EditView: View {
                         HStack{
                             
                             
-                            Text(surname)
+                            Text(beauty.surname)
                                 .font(.custom("Livvic-Medium", size: 15))
                                 .foregroundColor(Color("Brown"))
                                 .padding(.leading, 10)
@@ -144,7 +144,7 @@ struct EditView: View {
                     .padding(.bottom, -10)
                 
                 
-            TextField("Email Adress", text: $email)
+                Text(beauty.email)
                     .font(.custom("Livvic-Medium", size: 12))
                     .foregroundColor(Color("Black"))
                     .multilineTextAlignment(.leading)
@@ -167,7 +167,7 @@ struct EditView: View {
                         HStack{
                             
                             
-                            Text(String(gender[selectedIndex]))
+                            Text(beauty.gender)
                                 .font(.custom("Livvic-Medium", size: 15))
                                 .foregroundColor(Color("Brown"))
                                 .padding(.leading, 10)
@@ -197,13 +197,15 @@ struct EditView: View {
                         
                         HStack{
                             
-                            
-                            Text(String(age))
+       
+                            Text(String(beauty.age))
                                 .font(.custom("Livvic-Medium", size: 15))
                                 .foregroundColor(Color("Brown"))
-                                .padding(.leading, 10)
-                                .frame(width: 75, height: 15)
-                            
+                                .frame(width: 300, height: 15)
+                                .padding(.all, 20)
+                                .border(Color("Grey"))
+                                .opacity(0.7)
+                                .padding(.top, 10)
                             
                             
                         }
@@ -231,17 +233,36 @@ struct EditView: View {
                     .padding(.leading, -170)
                     .padding(.bottom, -10)
                 
-                
-                Text(String(skintype))
-                    .font(.custom("Livvic-Medium", size: 15))
-                    .foregroundColor(Color("Brown"))
-                    .frame(width: 300, height: 15)
-                    .padding(.all, 20)
-                    .border(Color("Grey"))
-                    .opacity(0.7)
-                    .padding(.top, 10)
-                
-
+                HStack{
+                    
+                    Text(String(beauty.skintype))
+                        .font(.custom("Livvic-Medium", size: 15))
+                        .foregroundColor(Color("Brown"))
+                        .frame(width: 300, height: 15)
+                        .padding(.all, 20)
+                        .border(Color("Grey"))
+                        .opacity(0.7)
+                        .padding(.top, 10)
+                    
+                    Text(String(beauty.skinconcern))
+                        .font(.custom("Livvic-Medium", size: 15))
+                        .foregroundColor(Color("Brown"))
+                        .frame(width: 300, height: 15)
+                        .padding(.all, 20)
+                        .border(Color("Grey"))
+                        .opacity(0.7)
+                        .padding(.top, 10)
+                    
+                    Text(String(beauty.skintone))
+                        .font(.custom("Livvic-Medium", size: 15))
+                        .foregroundColor(Color("Brown"))
+                        .frame(width: 300, height: 15)
+                        .padding(.all, 20)
+                        .border(Color("Grey"))
+                        .opacity(0.7)
+                        .padding(.top, 10)
+                    
+                }
                 
                 
             }//Button
@@ -276,9 +297,15 @@ struct EditView: View {
                     
                 }//Button
                 
-                .disabled(username.isEmpty || password.isEmpty )
+               
             }
-        }//VStack
+        }//ZStack
+        .onAppear{
+            
+            FirestoreViewModel.fetchUser(uid: Auth.auth().currentUser?.uid ?? "", onSuccess: {user in
+                self.beauty = user
+            })
+        }
         
     }
     
@@ -286,6 +313,6 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView()
+        EditView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
     }
 }

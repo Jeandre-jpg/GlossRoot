@@ -25,10 +25,18 @@
 		3C263E7628F2BCBD00927835 /* BoardingRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C263E7528F2BCBC00927835 /* BoardingRegister.swift */; };
 		3C263E7828F2BCFA00927835 /* BoardRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C263E7728F2BCFA00927835 /* BoardRegister.swift */; };
 		3C263E7C28F307E000927835 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C263E7B28F307E000927835 /* LoginView.swift */; };
+		3C2BC9152905F230008601AD /* BeautyProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BC9142905F230008601AD /* BeautyProductsView.swift */; };
 		3C3E8E2728FB7F9D00C55343 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E8E2628FB7F9D00C55343 /* EditView.swift */; };
+		3C5F0E7A29068D3700AE0727 /* SkinProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F0E7929068D3700AE0727 /* SkinProductsView.swift */; };
+		3C5F0E7F2906FECD00AE0727 /* Skinproducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F0E7E2906FECD00AE0727 /* Skinproducts.swift */; };
+		3C5F0E812907002D00AE0727 /* SkinproductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F0E802907002D00AE0727 /* SkinproductsViewModel.swift */; };
+		3C633EE529051C9900EC4737 /* FaceFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C633EE429051C9900EC4737 /* FaceFilterView.swift */; };
+		3C633EE72905651D00EC4737 /* GlossifySkinToneMLClass.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3C633EE62905651D00EC4737 /* GlossifySkinToneMLClass.mlmodel */; };
+		3C633EE92905673F00EC4737 /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C633EE82905673F00EC4737 /* Beauty.swift */; };
+		3C633EEB290569F300EC4737 /* FirestoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C633EEA290569F300EC4737 /* FirestoreViewModel.swift */; };
+		3C633EEE29058CAD00EC4737 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3C633EED29058CAD00EC4737 /* SDWebImageSwiftUI */; };
 		3C6B535B28FD322D008E5653 /* FaceScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B535A28FD322D008E5653 /* FaceScanView.swift */; };
 		3C6B535D28FD35DF008E5653 /* FaceAi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B535C28FD35DF008E5653 /* FaceAi.swift */; };
-		3C6B535F28FD5B1A008E5653 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B535E28FD5B1A008E5653 /* MobileNetV2.mlmodel */; };
 		3C6B536428FD5E38008E5653 /* UIImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B536328FD5E37008E5653 /* UIImageService.swift */; };
 		3C6B536728FD686D008E5653 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B536628FD686D008E5653 /* ImagePicker.swift */; };
 		3C6B536928FD92E0008E5653 /* AiTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B536828FD92E0008E5653 /* AiTabBarView.swift */; };
@@ -42,7 +50,6 @@
 		3CAA5A9B28FB02A900A901B5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAA5A9A28FB02A900A901B5 /* FirebaseFirestore */; };
 		3CAA5A9D28FB02A900A901B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAA5A9C28FB02A900A901B5 /* FirebaseStorage */; };
 		3CAA5A9F28FB594400A901B5 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA5A9E28FB594400A901B5 /* TabBarView.swift */; };
-		3CAA5AA128FB62E800A901B5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA5AA028FB62E800A901B5 /* ProfileView.swift */; };
 		3CB4262528E9E00100EEE1A7 /* DreamAvenue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4262428E9DFF700EEE1A7 /* DreamAvenue.otf */; };
 		3CB4262728E9E5F600EEE1A7 /* Boarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4262628E9E5F600EEE1A7 /* Boarding.swift */; };
 		3CB4262B28E9E84500EEE1A7 /* OffsetTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4262A28E9E84500EEE1A7 /* OffsetTab.swift */; };
@@ -69,17 +76,23 @@
 		3C263E7528F2BCBC00927835 /* BoardingRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingRegister.swift; sourceTree = "<group>"; };
 		3C263E7728F2BCFA00927835 /* BoardRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRegister.swift; sourceTree = "<group>"; };
 		3C263E7B28F307E000927835 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3C2BC9142905F230008601AD /* BeautyProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyProductsView.swift; sourceTree = "<group>"; };
 		3C3E8E2628FB7F9D00C55343 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		3C5F0E7929068D3700AE0727 /* SkinProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinProductsView.swift; sourceTree = "<group>"; };
+		3C5F0E7E2906FECD00AE0727 /* Skinproducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skinproducts.swift; sourceTree = "<group>"; };
+		3C5F0E802907002D00AE0727 /* SkinproductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinproductsViewModel.swift; sourceTree = "<group>"; };
+		3C633EE429051C9900EC4737 /* FaceFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFilterView.swift; sourceTree = "<group>"; };
+		3C633EE62905651D00EC4737 /* GlossifySkinToneMLClass.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GlossifySkinToneMLClass.mlmodel; sourceTree = "<group>"; };
+		3C633EE82905673F00EC4737 /* Beauty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty.swift; sourceTree = "<group>"; };
+		3C633EEA290569F300EC4737 /* FirestoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreViewModel.swift; sourceTree = "<group>"; };
 		3C6B535A28FD322D008E5653 /* FaceScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanView.swift; sourceTree = "<group>"; };
 		3C6B535C28FD35DF008E5653 /* FaceAi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAi.swift; sourceTree = "<group>"; };
-		3C6B535E28FD5B1A008E5653 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		3C6B536328FD5E37008E5653 /* UIImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageService.swift; sourceTree = "<group>"; };
 		3C6B536628FD686D008E5653 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3C6B536828FD92E0008E5653 /* AiTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiTabBarView.swift; sourceTree = "<group>"; };
 		3C7C4F5328FDBF2900AE38C5 /* GlossifyMLClass.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GlossifyMLClass.mlmodel; sourceTree = "<group>"; };
 		3C7C4F5528FDE77200AE38C5 /* SkinConcernsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinConcernsClass.swift; sourceTree = "<group>"; };
 		3CAA5A9E28FB594400A901B5 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		3CAA5AA028FB62E800A901B5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3CB4262428E9DFF700EEE1A7 /* DreamAvenue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreamAvenue.otf; sourceTree = "<group>"; };
 		3CB4262628E9E5F600EEE1A7 /* Boarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boarding.swift; sourceTree = "<group>"; };
 		3CB4262A28E9E84500EEE1A7 /* OffsetTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetTab.swift; sourceTree = "<group>"; };
@@ -94,6 +107,7 @@
 				3CAA5A9328FB02A900A901B5 /* FirebaseAppCheck in Frameworks */,
 				3CAA5A9728FB02A900A901B5 /* FirebaseCrashlytics in Frameworks */,
 				3CAA5A9528FB02A900A901B5 /* FirebaseAuth in Frameworks */,
+				3C633EEE29058CAD00EC4737 /* SDWebImageSwiftUI in Frameworks */,
 				3CAA5A9D28FB02A900A901B5 /* FirebaseStorage in Frameworks */,
 				3CAA5A9128FB02A900A901B5 /* FirebaseAnalytics in Frameworks */,
 				3CAA5A9B28FB02A900A901B5 /* FirebaseFirestore in Frameworks */,
@@ -163,11 +177,13 @@
 		3C1D109628E9DB9000AFC22A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3C633EE62905651D00EC4737 /* GlossifySkinToneMLClass.mlmodel */,
 				3C7C4F5328FDBF2900AE38C5 /* GlossifyMLClass.mlmodel */,
-				3C6B535E28FD5B1A008E5653 /* MobileNetV2.mlmodel */,
 				3CB4262628E9E5F600EEE1A7 /* Boarding.swift */,
 				3C263E7728F2BCFA00927835 /* BoardRegister.swift */,
 				3C6B535C28FD35DF008E5653 /* FaceAi.swift */,
+				3C633EE82905673F00EC4737 /* Beauty.swift */,
+				3C5F0E7E2906FECD00AE0727 /* Skinproducts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,22 +202,32 @@
 			isa = PBXGroup;
 			children = (
 				3C6B535928FD31F8008E5653 /* AiImplementation */,
+				3C0D037628F4BC4400E3839D /* ForgotPassView.swift */,
+				3C263E7B28F307E000927835 /* LoginView.swift */,
 				3C263E7528F2BCBC00927835 /* BoardingRegister.swift */,
 				3C1D109828E9DB9600AFC22A /* OnboardingView.swift */,
+				3C3E8E2628FB7F9D00C55343 /* EditView.swift */,
 				3C1D109B28E9DBA000AFC22A /* SplashView.swift */,
 				3C263E7328F2BB3B00927835 /* DashboardView.swift */,
-				3C263E7B28F307E000927835 /* LoginView.swift */,
-				3C0D037628F4BC4400E3839D /* ForgotPassView.swift */,
-				3CAA5AA028FB62E800A901B5 /* ProfileView.swift */,
-				3C3E8E2628FB7F9D00C55343 /* EditView.swift */,
+				3C5F0E7B29068DDE00AE0727 /* Products */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		3C5F0E7B29068DDE00AE0727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C5F0E7929068D3700AE0727 /* SkinProductsView.swift */,
+				3C2BC9142905F230008601AD /* BeautyProductsView.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		3C6B535928FD31F8008E5653 /* AiImplementation */ = {
 			isa = PBXGroup;
 			children = (
 				3C6B535A28FD322D008E5653 /* FaceScanView.swift */,
+				3C633EE429051C9900EC4737 /* FaceFilterView.swift */,
 			);
 			path = AiImplementation;
 			sourceTree = "<group>";
@@ -227,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				3C06223428FAFD450066D366 /* RegisterLoginViewModel.swift */,
+				3C633EEA290569F300EC4737 /* FirestoreViewModel.swift */,
+				3C5F0E802907002D00AE0727 /* SkinproductsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -256,6 +284,7 @@
 				3CAA5A9828FB02A900A901B5 /* FirebaseDatabase */,
 				3CAA5A9A28FB02A900A901B5 /* FirebaseFirestore */,
 				3CAA5A9C28FB02A900A901B5 /* FirebaseStorage */,
+				3C633EED29058CAD00EC4737 /* SDWebImageSwiftUI */,
 			);
 			productName = Gloss;
 			productReference = 3C1D107A28E9DB6300AFC22A /* Gloss.app */;
@@ -287,6 +316,7 @@
 			mainGroup = 3C1D107128E9DB6300AFC22A;
 			packageReferences = (
 				3CAA5A8F28FB02A900A901B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3C633EEC29058CAD00EC4737 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 3C1D107B28E9DB6300AFC22A /* Products */;
 			projectDirPath = "";
@@ -343,13 +373,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6B535F28FD5B1A008E5653 /* MobileNetV2.mlmodel in Sources */,
 				3C1D109928E9DB9600AFC22A /* OnboardingView.swift in Sources */,
 				3C1D109C28E9DBA000AFC22A /* SplashView.swift in Sources */,
 				3CAA5A9F28FB594400A901B5 /* TabBarView.swift in Sources */,
 				3C7C4F5428FDBF2900AE38C5 /* GlossifyMLClass.mlmodel in Sources */,
 				3C1D108028E9DB6300AFC22A /* ContentView.swift in Sources */,
 				3C263E7428F2BB3B00927835 /* DashboardView.swift in Sources */,
+				3C5F0E7F2906FECD00AE0727 /* Skinproducts.swift in Sources */,
+				3C2BC9152905F230008601AD /* BeautyProductsView.swift in Sources */,
 				3C263E7628F2BCBD00927835 /* BoardingRegister.swift in Sources */,
 				3CB4262728E9E5F600EEE1A7 /* Boarding.swift in Sources */,
 				3C06223528FAFD450066D366 /* RegisterLoginViewModel.swift in Sources */,
@@ -357,13 +388,18 @@
 				3CB4262B28E9E84500EEE1A7 /* OffsetTab.swift in Sources */,
 				3C1D107E28E9DB6300AFC22A /* GlossApp.swift in Sources */,
 				3C263E7C28F307E000927835 /* LoginView.swift in Sources */,
+				3C5F0E812907002D00AE0727 /* SkinproductsViewModel.swift in Sources */,
+				3C633EE92905673F00EC4737 /* Beauty.swift in Sources */,
 				3C3E8E2728FB7F9D00C55343 /* EditView.swift in Sources */,
+				3C633EE529051C9900EC4737 /* FaceFilterView.swift in Sources */,
+				3C633EEB290569F300EC4737 /* FirestoreViewModel.swift in Sources */,
+				3C633EE72905651D00EC4737 /* GlossifySkinToneMLClass.mlmodel in Sources */,
 				3C6B535B28FD322D008E5653 /* FaceScanView.swift in Sources */,
 				3C263E7828F2BCFA00927835 /* BoardRegister.swift in Sources */,
-				3CAA5AA128FB62E800A901B5 /* ProfileView.swift in Sources */,
 				3C6B536428FD5E38008E5653 /* UIImageService.swift in Sources */,
 				3C6B536728FD686D008E5653 /* ImagePicker.swift in Sources */,
 				3C6B536928FD92E0008E5653 /* AiTabBarView.swift in Sources */,
+				3C5F0E7A29068D3700AE0727 /* SkinProductsView.swift in Sources */,
 				3C0D037728F4BC4400E3839D /* ForgotPassView.swift in Sources */,
 				3C6B535D28FD35DF008E5653 /* FaceAi.swift in Sources */,
 			);
@@ -497,9 +533,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Gloss/Preview Content\"";
 				DEVELOPMENT_TEAM = 9M2VSZXT7V;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gloss/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Run camera for face ai ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -529,9 +567,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Gloss/Preview Content\"";
 				DEVELOPMENT_TEAM = 9M2VSZXT7V;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gloss/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Run camera for face ai ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -575,6 +615,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3C633EEC29058CAD00EC4737 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		3CAA5A8F28FB02A900A901B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -586,6 +634,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3C633EED29058CAD00EC4737 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C633EEC29058CAD00EC4737 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		3CAA5A9028FB02A900A901B5 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3CAA5A8F28FB02A900A901B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -15,6 +15,7 @@ struct OnboardingView: View {
         Boarding(image: "face", title: "Face Scan", description: "For better results, use our skin sensor tool to scan your face and detect areas you need to work on.")
     ]
 
+    @AppStorage("Boarding") var isOnboarding: Bool = true
     
     @State var offset: CGFloat = 0
     var body: some View {
@@ -140,6 +141,8 @@ struct OnboardingView: View {
                                             .multilineTextAlignment(.center)
                                             .underline()
                                     }
+                                }.onTapGesture{
+                                    isOnboarding = false
                                 }
                 
            

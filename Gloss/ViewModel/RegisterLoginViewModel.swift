@@ -62,7 +62,7 @@ class AuthManage: ObservableObject{
         }
     }
     
-    // SIGNOUT FUNCTION
+    
    func signOut() {
         try? auth.signOut()
         UserDefaults.standard.removeObject(forKey: "beauties")

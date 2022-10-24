@@ -25,8 +25,11 @@ struct FaceScanView: View {
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     @State private var image: UIImage?
     @State private var classLabel: String = ""
+    @State private var departmentLabel: String = ""
     
     private let classifier = try! SkinConcernsClass(mlModel: GlossifyMLClass(configuration: MLModelConfiguration()).model)
+    
+    private let department = try! SkinConcernsClass(mlModel: GlossifySkinToneMLClass(configuration: MLModelConfiguration()).model)
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -38,18 +41,17 @@ struct FaceScanView: View {
             HStack(spacing: 10){
                 ZStack{
                     NavigationLink(destination:
-                                    DashboardView()
+                                    DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
                         .navigationBarBackButtonHidden(true)){
                             
                             Image("back")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                            
                                 .frame(width: 35, height: 10, alignment: .center)
                             
                         }
                     
-                }.offset(x: -150, y: 60)
+                }.offset(x: -150, y: 100)
             }
             
             
@@ -59,9 +61,7 @@ struct FaceScanView: View {
                 .padding(.top, 350)
                 .frame(width: 350, height: 350, alignment: .center)
             
-            Spacer()
-                .frame(width: 100)
-            
+         
             
             VStack{
                 
@@ -115,7 +115,7 @@ struct FaceScanView: View {
                             .padding(.top, -140)
                         
                         
-                        Text("Please scan your beautiful within our borders")
+                        Text("Please scan your beautiful face within our borders")
                             .font(.custom("Livvic-Regular", size: 12))
                             .foregroundColor(Color("Black"))
                             .multilineTextAlignment(.center)
@@ -133,14 +133,23 @@ struct FaceScanView: View {
                         
                         
                         Button(action:{
+                            
+                         
+                            
                             if let img = self.image{
                                 self.classifier?.classify(img){result in
                                     self.classLabel = result
                                     print(result)
+             
+                                }
+                                
+                                self.department?.classify(img){result in
+                                    self.departmentLabel = result
+                                    print(result)
+             
                                 }
                             }
-                            // classificationLabel = "Hello"
-                            //self.performImageClasification()
+                         
                             self.showsBlob = true
                         }, label: {
                             ZStack{
@@ -192,12 +201,7 @@ struct FaceScanView: View {
             .frame(width: getScreenBounds().width)
             .frame(maxHeight: .infinity)
             
-            
-            
-            ///////////////
-            ///if statement
-            ///
-            
+      
             if showsBlob {
                 
                 VStack{
@@ -211,6 +215,12 @@ struct FaceScanView: View {
                         .foregroundColor(Color("Black"))
                         .padding(10)
                         .padding(.top, -750)
+                    
+                    Text(departmentLabel)
+                        .font(.custom("Livvic-Medium", size: 15))
+                        .foregroundColor(Color("Black"))
+                        .padding(10)
+                        .padding(.top, 10)
                     
                 }
             }

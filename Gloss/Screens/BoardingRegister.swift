@@ -36,7 +36,7 @@ struct BoardingRegister: View {
     var body: some View {
         
         if userIsLoggedIn{
-            DashboardView()
+            DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
         }else{
             content
         }
@@ -146,7 +146,7 @@ struct BoardingRegister: View {
                         
                     }//VStack
                     
-                    Text("Name * \(name)")
+                    Text("Name *")
                         .font(.custom("Livvic-Medium", size: 15))
                         .foregroundColor(Color("Brown"))
                         .padding(.top, 5)
@@ -407,7 +407,7 @@ struct BoardingRegister: View {
                             .opacity(0.7)
                             .frame(width: 350, height: 70)
                         
-                        Text("Username * \(username)")
+                        Text("Username *")
                             .font(.custom("Livvic-Medium", size: 15))
                             .foregroundColor(Color("Brown"))
                             .padding(.top, 5)

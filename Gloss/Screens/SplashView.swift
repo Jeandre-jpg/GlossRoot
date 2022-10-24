@@ -8,12 +8,17 @@
 import SwiftUI
 struct SplashView: View {
     @State private var isActive = false
-  
+    @AppStorage("Boarding") var isOnboarding: Bool = true
+    
     var body: some View {
         
         
         if isActive{
-            OnboardingView()
+            if isOnboarding{
+                OnboardingView()
+            }else{
+                LoginView()
+            }
             
         }else{
         ZStack{
