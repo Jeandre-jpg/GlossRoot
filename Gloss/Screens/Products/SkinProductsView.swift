@@ -219,13 +219,18 @@ struct SkinProductsView: View {
                                         .fill(Color("White"))
                                         .frame(width: 160, height: 160)
                                         .padding(.top, 20)
-                                        .opacity(0.5)
+                                        .opacity(1)
                                     
-                                    WebImage(url: URL(string:"https://firebasestorage.googleapis.com/v0/b/glossroot.appspot.com/o/foundation_step2.jpg?alt=media&token=7656f43d-e08c-4c5a-a7c7-61de1aa8f83f"))
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 160, height: 160)
-                                        .padding(.leading, 20)
+                                    NavigationLink(destination:
+                                                    SkinDetailView()
+                                        .navigationBarBackButtonHidden(true)){
+                                            WebImage(url: URL(string:skinproduct.image))
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 120, height: 120)
+                                        }
+//                                        .buttonStyle(PlainButtonStyle())
+//                                        .opacity(1)
                                 }
                                 
                                 VStack{
@@ -233,10 +238,10 @@ struct SkinProductsView: View {
                                     
                                     
                                     Text(skinproduct.name)
-                                        .font(.custom("Livvic-SemiBold", size: 15))
+                                        .font(.custom("Livvic-SemiBold", size: 12))
                                         .foregroundColor(Color("Black"))
                                         .padding(.top, 10)
-                                        .padding(.leading, -70)
+                                        .padding(.leading, 10)
                                     
                                     Text(skinproduct.category)
                                         .font(.custom("Livvic-Regular", size: 15))
@@ -252,24 +257,6 @@ struct SkinProductsView: View {
                  
                 }
             }
-//            Drawer() {
-//                ZStack {
-//                    
-//                    RoundedRectangle(cornerRadius: 12)
-//                        .foregroundColor(.white)
-//                        .shadow(radius: 100)
-//                    
-//                    VStack(alignment: .center) {
-//                        Spacer().frame(height: 4.0)
-//                        RoundedRectangle(cornerRadius: 3.0)
-//                            .foregroundColor(.gray)
-//                            .frame(width: 30.0, height: 6.0)
-//                        Spacer()
-//                    }
-//                }
-//            }.edgesIgnoringSafeArea(.vertical)
-//            .rest(at: .constant([100, 340, UIScreen.main.bounds.height - 40]))
-//            .impact(.light)
         }.onAppear(){
             self.skins.fetchSkinproducts()
         }

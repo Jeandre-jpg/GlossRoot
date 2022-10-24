@@ -1,0 +1,16 @@
+PODS:
+  - Warhol (0.2.0)
+
+DEPENDENCIES:
+  - Warhol
+
+SPEC REPOS:
+  trunk:
+    - Warhol
+
+SPEC CHECKSUMS:
+  Warhol: 232f93506ea37d3c90ce0dd6403806628567a6ee
+
+PODFILE CHECKSUM: 6fe6cc98ea9bab065c80ab65233e21cafdbef094
+
+COCOAPODS: 1.8.4

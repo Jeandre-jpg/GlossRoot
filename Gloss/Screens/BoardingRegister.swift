@@ -94,35 +94,15 @@ struct BoardingRegister: View {
                 
             }//offset
             
+            
             if getIndex() == 0{
                 
                 VStack(spacing: 10){
                     
                     Spacer()
-                        .frame(width: 200)
+                        .frame(height: 150)
                     
                     VStack{
-                        
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color("Pink"))
-                            .border(Color("Grey"))
-                            .frame(width: 350, height: 50)
-                            .padding(.top, 20)
-                            .opacity(0.5)
-                        
-                        
-                        HStack(spacing: 10){
-                            Image("Facebook")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 25, height: 25)
-                            
-                            Image("Google")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                                .padding(.leading, 20)
-                        }.padding(.top, -50)
                         
                         HStack(spacing: 10){
                             Rectangle()
@@ -130,7 +110,7 @@ struct BoardingRegister: View {
                                 .frame(height: 1)
                                 .padding(.leading)
                             
-                            Text("OR")
+                            Text("Let's do it")
                                 .font(.custom("DreamAvenue", size: 12))
                                 .foregroundColor(Color("Grey"))
                                 .multilineTextAlignment(.center)
@@ -142,14 +122,18 @@ struct BoardingRegister: View {
                                 .padding(.trailing)
                             
                         }
-                        .padding(10)
+                        .padding(.top, 120)
                         
                     }//VStack
+                   
+                    
+                    
+                    
                     
                     Text("Name *")
                         .font(.custom("Livvic-Medium", size: 15))
                         .foregroundColor(Color("Brown"))
-                        .padding(.top, 5)
+                        .padding(.top, 30)
                         .padding(.leading, -170)
                         .padding(.bottom, -10)
                     

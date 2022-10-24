@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1243FC1B3861745EE84930BE377C9687 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B887155FF43C6B0A063D43733C8168 /* FaceDetector.swift */; };
+		125F845186C15673653B34C47774AF3A /* CameraFaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA7B40A6C9523DAFD30E89E0B7FA48 /* CameraFaceDetectionViewController.swift */; };
+		448ECBA41CC91BE04003AD074BEE1C35 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB71F56F8F8168EBAAD670DD7D7D0C0 /* UIView+Constraints.swift */; };
+		44BA3C73717696BD1A494A80263CFC4B /* CGRect+SizeFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7923D9E7E4F2F65F85C37567F9FC16BF /* CGRect+SizeFactor.swift */; };
+		44BA9AD220314B04B3B14BE5D1D00D8C /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9DAAE541ED6C2578964E6A74EE3DB /* CoreGraphicsExtensions.swift */; };
+		5382CDF711A887C4EE858793C424A2D7 /* Pods-Gloss-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D232522E8720095017F29D7E6CDA5E /* Pods-Gloss-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		684C59248D2D07221B9C1E4FB872863B /* Pods-Gloss-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6B6BDF6B3C665908674ABCFC0E7179 /* Pods-Gloss-dummy.m */; };
+		7241CD9EFDDD47C5671E0942E959220C /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65CBBAB7FF350C8C901E6D0B04E1FCC /* AVCaptureVideoPreviewLayer+Landmarks.swift */; };
+		7B50845A874604B2887AD0338AFA25FB /* FaceLayoutCameraFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F7619782410269CAA0B67C884AB9 /* FaceLayoutCameraFrontView.swift */; };
+		85C5F7DE513ABAC035F6459112FD195F /* Warhol.h in Headers */ = {isa = PBXBuildFile; fileRef = 014A58E3AD0B5610F8739E8D316BBBA9 /* Warhol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB6647EB19C3BE0D99A6D28635234B1B /* FaceLandmarkPerimeter+Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB45D6E898D339289916E93C6E86F96B /* FaceLandmarkPerimeter+Rect.swift */; };
+		C3394F411BDE414CEC62D42662230B06 /* Warhol-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF4970E1ED9D92ED4AB07D766973B4 /* Warhol-dummy.m */; };
+		C4DEC08E20C4C576585EF46CEB6ABD25 /* FaceImagesLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311FA0172958E5B4E62AD416D7270267 /* FaceImagesLayout.swift */; };
+		D2DA0DB7424BE9115EC3C4872F5A0A78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DDE06C82737191B2CBD3ED6D9F6F398F /* Warhol-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 366325A353CA9DC96BD59970FA980955 /* Warhol-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E32E575A10D94DC70C2288C47C7492D5 /* Warhol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6B6D524A7925084DE09519DAA2075 /* Warhol.swift */; };
+		E4D14986C403E97BEC77161D5E7D0644 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EC5FFBBAB5636DE31ED4A96AE36036B8 /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EFEDBAE4C3A8A6553E407C9F9D7D1 /* FaceViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E655758E8EF271533EDC4D86EC30017F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2AE15AA96DA8268F5130DF95AB3B0B2;
+			remoteInfo = Warhol;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		014A58E3AD0B5610F8739E8D316BBBA9 /* Warhol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Warhol.h; path = Warhol/Warhol/Warhol.h; sourceTree = "<group>"; };
+		06CF4970E1ED9D92ED4AB07D766973B4 /* Warhol-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Warhol-dummy.m"; sourceTree = "<group>"; };
+		126A3CC36111A758F5B5C1951969BDB6 /* Warhol.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Warhol.xcconfig; sourceTree = "<group>"; };
+		1A65E69C000A376193003334CC473A50 /* Pods-Gloss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gloss.debug.xcconfig"; sourceTree = "<group>"; };
+		23C5B98F9260F0D79D79F49AF436CC92 /* Pods-Gloss-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gloss-Info.plist"; sourceTree = "<group>"; };
+		311FA0172958E5B4E62AD416D7270267 /* FaceImagesLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaceImagesLayout.swift; path = Warhol/Warhol/FaceImagesLayout/FaceImagesLayout.swift; sourceTree = "<group>"; };
+		366325A353CA9DC96BD59970FA980955 /* Warhol-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Warhol-umbrella.h"; sourceTree = "<group>"; };
+		3CFE143C4464F4B9E1FCDB5EBF89B253 /* Pods-Gloss-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gloss-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4945BB7F1EC3C1FAA4836D8466D53C2E /* Pods_Gloss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gloss.framework; path = "Pods-Gloss.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB71F56F8F8168EBAAD670DD7D7D0C0 /* UIView+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Constraints.swift"; path = "Warhol/Warhol/Extensions/UIView+Constraints.swift"; sourceTree = "<group>"; };
+		54B887155FF43C6B0A063D43733C8168 /* FaceDetector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaceDetector.swift; path = Warhol/Warhol/FaceDetector.swift; sourceTree = "<group>"; };
+		58F35A304571FC1B45A4C8B818CEFE98 /* Pods-Gloss.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gloss.modulemap"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7923D9E7E4F2F65F85C37567F9FC16BF /* CGRect+SizeFactor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+SizeFactor.swift"; path = "Warhol/Warhol/Extensions/CGRect+SizeFactor.swift"; sourceTree = "<group>"; };
+		79D232522E8720095017F29D7E6CDA5E /* Pods-Gloss-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gloss-umbrella.h"; sourceTree = "<group>"; };
+		8ACA7B40A6C9523DAFD30E89E0B7FA48 /* CameraFaceDetectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraFaceDetectionViewController.swift; path = Warhol/Warhol/CameraFaceDetectionViewController.swift; sourceTree = "<group>"; };
+		8EE9DAAE541ED6C2578964E6A74EE3DB /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreGraphicsExtensions.swift; path = Warhol/Warhol/Extensions/CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		9A940693B53BCA62DA9D6427E683C2A5 /* Warhol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Warhol.framework; path = Warhol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6B6EA9ECFCE0CD04B6A154E990F2239 /* Warhol-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Warhol-prefix.pch"; sourceTree = "<group>"; };
+		AB59CED40CC76BA64BB6294B3C351462 /* Warhol-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Warhol-Info.plist"; sourceTree = "<group>"; };
+		BD0EFEDBAE4C3A8A6553E407C9F9D7D1 /* FaceViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaceViewModel.swift; path = Warhol/Warhol/FaceViewModel.swift; sourceTree = "<group>"; };
+		BF990BCC2EFB32E9A9A6D9B98982DE58 /* Warhol.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Warhol.modulemap; sourceTree = "<group>"; };
+		C65CBBAB7FF350C8C901E6D0B04E1FCC /* AVCaptureVideoPreviewLayer+Landmarks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVCaptureVideoPreviewLayer+Landmarks.swift"; path = "Warhol/Warhol/Extensions/AVCaptureVideoPreviewLayer+Landmarks.swift"; sourceTree = "<group>"; };
+		C7075D55E799FF33B4B1AFA77C52B940 /* Pods-Gloss-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gloss-acknowledgements.plist"; sourceTree = "<group>"; };
+		D68C86747C97D9238901B083D58588B1 /* Pods-Gloss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gloss.release.xcconfig"; sourceTree = "<group>"; };
+		EC39171872A497DF07A20719B5E6C304 /* Pods-Gloss-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gloss-frameworks.sh"; sourceTree = "<group>"; };
+		F829F7619782410269CAA0B67C884AB9 /* FaceLayoutCameraFrontView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaceLayoutCameraFrontView.swift; path = Warhol/Warhol/FaceImagesLayout/FaceLayoutCameraFrontView.swift; sourceTree = "<group>"; };
+		FAD6B6D524A7925084DE09519DAA2075 /* Warhol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Warhol.swift; path = Warhol/Warhol/Warhol.swift; sourceTree = "<group>"; };
+		FB45D6E898D339289916E93C6E86F96B /* FaceLandmarkPerimeter+Rect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FaceLandmarkPerimeter+Rect.swift"; path = "Warhol/Warhol/Extensions/FaceLandmarkPerimeter+Rect.swift"; sourceTree = "<group>"; };
+		FE6B6BDF6B3C665908674ABCFC0E7179 /* Pods-Gloss-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gloss-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D314140ECA2E249BC66FDFC63073709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4D14986C403E97BEC77161D5E7D0644 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86232A3DAFFC94D076DE9CEEE1AAB56F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DA0DB7424BE9115EC3C4872F5A0A78 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D11B3A23BFA956B22CEEC8DC59375FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF990BCC2EFB32E9A9A6D9B98982DE58 /* Warhol.modulemap */,
+				126A3CC36111A758F5B5C1951969BDB6 /* Warhol.xcconfig */,
+				06CF4970E1ED9D92ED4AB07D766973B4 /* Warhol-dummy.m */,
+				AB59CED40CC76BA64BB6294B3C351462 /* Warhol-Info.plist */,
+				A6B6EA9ECFCE0CD04B6A154E990F2239 /* Warhol-prefix.pch */,
+				366325A353CA9DC96BD59970FA980955 /* Warhol-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Warhol";
+			sourceTree = "<group>";
+		};
+		3F0F032B586252AD7A4AF552D3416882 /* Warhol */ = {
+			isa = PBXGroup;
+			children = (
+				C65CBBAB7FF350C8C901E6D0B04E1FCC /* AVCaptureVideoPreviewLayer+Landmarks.swift */,
+				8ACA7B40A6C9523DAFD30E89E0B7FA48 /* CameraFaceDetectionViewController.swift */,
+				7923D9E7E4F2F65F85C37567F9FC16BF /* CGRect+SizeFactor.swift */,
+				8EE9DAAE541ED6C2578964E6A74EE3DB /* CoreGraphicsExtensions.swift */,
+				54B887155FF43C6B0A063D43733C8168 /* FaceDetector.swift */,
+				311FA0172958E5B4E62AD416D7270267 /* FaceImagesLayout.swift */,
+				FB45D6E898D339289916E93C6E86F96B /* FaceLandmarkPerimeter+Rect.swift */,
+				F829F7619782410269CAA0B67C884AB9 /* FaceLayoutCameraFrontView.swift */,
+				BD0EFEDBAE4C3A8A6553E407C9F9D7D1 /* FaceViewModel.swift */,
+				4FB71F56F8F8168EBAAD670DD7D7D0C0 /* UIView+Constraints.swift */,
+				014A58E3AD0B5610F8739E8D316BBBA9 /* Warhol.h */,
+				FAD6B6D524A7925084DE09519DAA2075 /* Warhol.swift */,
+				1D11B3A23BFA956B22CEEC8DC59375FA /* Support Files */,
+			);
+			name = Warhol;
+			path = Warhol;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5C7223FE54FDD94850D27981F19020C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F0F032B586252AD7A4AF552D3416882 /* Warhol */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A68C065D2B8A7A27D15F8D34633E918A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE854E56FC3C22595274AD50B930CA /* Pods-Gloss */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CCADC6A90CD71FA9D2714D7C9A3382FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4945BB7F1EC3C1FAA4836D8466D53C2E /* Pods_Gloss.framework */,
+				9A940693B53BCA62DA9D6427E683C2A5 /* Warhol.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				5C7223FE54FDD94850D27981F19020C8 /* Pods */,
+				CCADC6A90CD71FA9D2714D7C9A3382FC /* Products */,
+				A68C065D2B8A7A27D15F8D34633E918A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEFE854E56FC3C22595274AD50B930CA /* Pods-Gloss */ = {
+			isa = PBXGroup;
+			children = (
+				58F35A304571FC1B45A4C8B818CEFE98 /* Pods-Gloss.modulemap */,
+				3CFE143C4464F4B9E1FCDB5EBF89B253 /* Pods-Gloss-acknowledgements.markdown */,
+				C7075D55E799FF33B4B1AFA77C52B940 /* Pods-Gloss-acknowledgements.plist */,
+				FE6B6BDF6B3C665908674ABCFC0E7179 /* Pods-Gloss-dummy.m */,
+				EC39171872A497DF07A20719B5E6C304 /* Pods-Gloss-frameworks.sh */,
+				23C5B98F9260F0D79D79F49AF436CC92 /* Pods-Gloss-Info.plist */,
+				79D232522E8720095017F29D7E6CDA5E /* Pods-Gloss-umbrella.h */,
+				1A65E69C000A376193003334CC473A50 /* Pods-Gloss.debug.xcconfig */,
+				D68C86747C97D9238901B083D58588B1 /* Pods-Gloss.release.xcconfig */,
+			);
+			name = "Pods-Gloss";
+			path = "Target Support Files/Pods-Gloss";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		826C1E7D143CB1FB84907B1B62483CC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C5F7DE513ABAC035F6459112FD195F /* Warhol.h in Headers */,
+				DDE06C82737191B2CBD3ED6D9F6F398F /* Warhol-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4C75AD9AD85C561B615275B8D6B61DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5382CDF711A887C4EE858793C424A2D7 /* Pods-Gloss-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F2AE15AA96DA8268F5130DF95AB3B0B2 /* Warhol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38A09D2EAB0CB11CC95BB6C8613D62BF /* Build configuration list for PBXNativeTarget "Warhol" */;
+			buildPhases = (
+				826C1E7D143CB1FB84907B1B62483CC6 /* Headers */,
+				F2B5F2E8110C50C85244600B4153AA0E /* Sources */,
+				86232A3DAFFC94D076DE9CEEE1AAB56F /* Frameworks */,
+				000FE85A437E9C58CB8092509F7F183B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Warhol;
+			productName = Warhol;
+			productReference = 9A940693B53BCA62DA9D6427E683C2A5 /* Warhol.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F99287F7C27F6C63ABA2DCFD66572D12 /* Pods-Gloss */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62427FB768E33C9F95BA6907FAF4946E /* Build configuration list for PBXNativeTarget "Pods-Gloss" */;
+			buildPhases = (
+				C4C75AD9AD85C561B615275B8D6B61DB /* Headers */,
+				ACBDD1FAB94F249492DA2043979CEF9B /* Sources */,
+				2D314140ECA2E249BC66FDFC63073709 /* Frameworks */,
+				886C403F6DD903AA4960438C81EE24B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0A95CBF175DABE40E05390D681B3C78 /* PBXTargetDependency */,
+			);
+			name = "Pods-Gloss";
+			productName = "Pods-Gloss";
+			productReference = 4945BB7F1EC3C1FAA4836D8466D53C2E /* Pods_Gloss.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CCADC6A90CD71FA9D2714D7C9A3382FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F99287F7C27F6C63ABA2DCFD66572D12 /* Pods-Gloss */,
+				F2AE15AA96DA8268F5130DF95AB3B0B2 /* Warhol */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000FE85A437E9C58CB8092509F7F183B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		886C403F6DD903AA4960438C81EE24B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACBDD1FAB94F249492DA2043979CEF9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684C59248D2D07221B9C1E4FB872863B /* Pods-Gloss-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B5F2E8110C50C85244600B4153AA0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7241CD9EFDDD47C5671E0942E959220C /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */,
+				125F845186C15673653B34C47774AF3A /* CameraFaceDetectionViewController.swift in Sources */,
+				44BA3C73717696BD1A494A80263CFC4B /* CGRect+SizeFactor.swift in Sources */,
+				44BA9AD220314B04B3B14BE5D1D00D8C /* CoreGraphicsExtensions.swift in Sources */,
+				1243FC1B3861745EE84930BE377C9687 /* FaceDetector.swift in Sources */,
+				C4DEC08E20C4C576585EF46CEB6ABD25 /* FaceImagesLayout.swift in Sources */,
+				BB6647EB19C3BE0D99A6D28635234B1B /* FaceLandmarkPerimeter+Rect.swift in Sources */,
+				7B50845A874604B2887AD0338AFA25FB /* FaceLayoutCameraFrontView.swift in Sources */,
+				EC5FFBBAB5636DE31ED4A96AE36036B8 /* FaceViewModel.swift in Sources */,
+				448ECBA41CC91BE04003AD074BEE1C35 /* UIView+Constraints.swift in Sources */,
+				E32E575A10D94DC70C2288C47C7492D5 /* Warhol.swift in Sources */,
+				C3394F411BDE414CEC62D42662230B06 /* Warhol-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0A95CBF175DABE40E05390D681B3C78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Warhol;
+			target = F2AE15AA96DA8268F5130DF95AB3B0B2 /* Warhol */;
+			targetProxy = E655758E8EF271533EDC4D86EC30017F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28BBBB69E4DCB4FBC35A7CD2499B156B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D68C86747C97D9238901B083D58588B1 /* Pods-Gloss.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gloss/Pods-Gloss-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gloss/Pods-Gloss.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		626527D6CE1C33495A9CB77058978F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CA8DC588ABEF502306E79D02A7F5C0ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 126A3CC36111A758F5B5C1951969BDB6 /* Warhol.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Warhol/Warhol-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Warhol/Warhol-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Warhol/Warhol.modulemap";
+				PRODUCT_MODULE_NAME = Warhol;
+				PRODUCT_NAME = Warhol;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E07029DF679A57487BBD0999DBA11BD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		ED82E8FC3C6A33197073E2DC25ECEC92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A65E69C000A376193003334CC473A50 /* Pods-Gloss.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gloss/Pods-Gloss-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gloss/Pods-Gloss.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC49DC1105929D42C53032F4C0588387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 126A3CC36111A758F5B5C1951969BDB6 /* Warhol.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Warhol/Warhol-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Warhol/Warhol-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Warhol/Warhol.modulemap";
+				PRODUCT_MODULE_NAME = Warhol;
+				PRODUCT_NAME = Warhol;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38A09D2EAB0CB11CC95BB6C8613D62BF /* Build configuration list for PBXNativeTarget "Warhol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA8DC588ABEF502306E79D02A7F5C0ED /* Debug */,
+				FC49DC1105929D42C53032F4C0588387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626527D6CE1C33495A9CB77058978F73 /* Debug */,
+				E07029DF679A57487BBD0999DBA11BD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62427FB768E33C9F95BA6907FAF4946E /* Build configuration list for PBXNativeTarget "Pods-Gloss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED82E8FC3C6A33197073E2DC25ECEC92 /* Debug */,
+				28BBBB69E4DCB4FBC35A7CD2499B156B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

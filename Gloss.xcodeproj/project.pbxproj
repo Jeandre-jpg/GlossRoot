@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A20634C71C59AAC6BDFCD1B /* Pods_Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58658496B408A0A8ED3829F /* Pods_Gloss.framework */; };
 		3C06223528FAFD450066D366 /* RegisterLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06223428FAFD450066D366 /* RegisterLoginViewModel.swift */; };
 		3C09198428F4A62A00291EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C09198328F4A62A00291EC4 /* GoogleService-Info.plist */; };
-		3C0D037728F4BC4400E3839D /* ForgotPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D037628F4BC4400E3839D /* ForgotPassView.swift */; };
 		3C1D107E28E9DB6300AFC22A /* GlossApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D107D28E9DB6300AFC22A /* GlossApp.swift */; };
 		3C1D108028E9DB6300AFC22A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D107F28E9DB6300AFC22A /* ContentView.swift */; };
 		3C1D108228E9DB6400AFC22A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1D108128E9DB6400AFC22A /* Assets.xcassets */; };
@@ -53,12 +53,16 @@
 		3CB4262528E9E00100EEE1A7 /* DreamAvenue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4262428E9DFF700EEE1A7 /* DreamAvenue.otf */; };
 		3CB4262728E9E5F600EEE1A7 /* Boarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4262628E9E5F600EEE1A7 /* Boarding.swift */; };
 		3CB4262B28E9E84500EEE1A7 /* OffsetTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4262A28E9E84500EEE1A7 /* OffsetTab.swift */; };
+		3CC5A646290724A20052408B /* SkinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5A645290724A20052408B /* SkinDetailView.swift */; };
+		3CC5A64829072CAA0052408B /* BeautyproductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5A64729072CA90052408B /* BeautyproductsViewModel.swift */; };
+		3CC5A64A29072D250052408B /* Beautyproducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5A64929072D240052408B /* Beautyproducts.swift */; };
+		3CC5A64C290731230052408B /* FaceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5A64B290731230052408B /* FaceFilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0974CA77C39D860EC22A144B /* Pods-Gloss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gloss.release.xcconfig"; path = "Target Support Files/Pods-Gloss/Pods-Gloss.release.xcconfig"; sourceTree = "<group>"; };
 		3C06223428FAFD450066D366 /* RegisterLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLoginViewModel.swift; sourceTree = "<group>"; };
 		3C09198328F4A62A00291EC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3C0D037628F4BC4400E3839D /* ForgotPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassView.swift; sourceTree = "<group>"; };
 		3C1D107A28E9DB6300AFC22A /* Gloss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gloss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1D107D28E9DB6300AFC22A /* GlossApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossApp.swift; sourceTree = "<group>"; };
 		3C1D107F28E9DB6300AFC22A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,12 @@
 		3CB4262428E9DFF700EEE1A7 /* DreamAvenue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreamAvenue.otf; sourceTree = "<group>"; };
 		3CB4262628E9E5F600EEE1A7 /* Boarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boarding.swift; sourceTree = "<group>"; };
 		3CB4262A28E9E84500EEE1A7 /* OffsetTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetTab.swift; sourceTree = "<group>"; };
+		3CC5A645290724A20052408B /* SkinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinDetailView.swift; sourceTree = "<group>"; };
+		3CC5A64729072CA90052408B /* BeautyproductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyproductsViewModel.swift; sourceTree = "<group>"; };
+		3CC5A64929072D240052408B /* Beautyproducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautyproducts.swift; sourceTree = "<group>"; };
+		3CC5A64B290731230052408B /* FaceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFilterViewModel.swift; sourceTree = "<group>"; };
+		AA8CC5165F6E1A30F05C7A4A /* Pods-Gloss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gloss.debug.xcconfig"; path = "Target Support Files/Pods-Gloss/Pods-Gloss.debug.xcconfig"; sourceTree = "<group>"; };
+		C58658496B408A0A8ED3829F /* Pods_Gloss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gloss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,17 +121,28 @@
 				3CAA5A9D28FB02A900A901B5 /* FirebaseStorage in Frameworks */,
 				3CAA5A9128FB02A900A901B5 /* FirebaseAnalytics in Frameworks */,
 				3CAA5A9B28FB02A900A901B5 /* FirebaseFirestore in Frameworks */,
+				2A20634C71C59AAC6BDFCD1B /* Pods_Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1884852C31B0201C1FAE3B20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C58658496B408A0A8ED3829F /* Pods_Gloss.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C1D107128E9DB6300AFC22A = {
 			isa = PBXGroup;
 			children = (
 				3C1D107C28E9DB6300AFC22A /* Gloss */,
 				3C1D107B28E9DB6300AFC22A /* Products */,
+				BB70D2517B67EAB402E9D5A2 /* Pods */,
+				1884852C31B0201C1FAE3B20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +205,7 @@
 				3C6B535C28FD35DF008E5653 /* FaceAi.swift */,
 				3C633EE82905673F00EC4737 /* Beauty.swift */,
 				3C5F0E7E2906FECD00AE0727 /* Skinproducts.swift */,
+				3CC5A64929072D240052408B /* Beautyproducts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				3C6B535928FD31F8008E5653 /* AiImplementation */,
-				3C0D037628F4BC4400E3839D /* ForgotPassView.swift */,
 				3C263E7B28F307E000927835 /* LoginView.swift */,
 				3C263E7528F2BCBC00927835 /* BoardingRegister.swift */,
 				3C1D109828E9DB9600AFC22A /* OnboardingView.swift */,
@@ -219,6 +240,7 @@
 			children = (
 				3C5F0E7929068D3700AE0727 /* SkinProductsView.swift */,
 				3C2BC9142905F230008601AD /* BeautyProductsView.swift */,
+				3CC5A645290724A20052408B /* SkinDetailView.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -255,8 +277,19 @@
 				3C06223428FAFD450066D366 /* RegisterLoginViewModel.swift */,
 				3C633EEA290569F300EC4737 /* FirestoreViewModel.swift */,
 				3C5F0E802907002D00AE0727 /* SkinproductsViewModel.swift */,
+				3CC5A64729072CA90052408B /* BeautyproductsViewModel.swift */,
+				3CC5A64B290731230052408B /* FaceFilterViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB70D2517B67EAB402E9D5A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA8CC5165F6E1A30F05C7A4A /* Pods-Gloss.debug.xcconfig */,
+				0974CA77C39D860EC22A144B /* Pods-Gloss.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,10 +299,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C1D108828E9DB6400AFC22A /* Build configuration list for PBXNativeTarget "Gloss" */;
 			buildPhases = (
+				98DA118A99A14236507B88C7 /* [CP] Check Pods Manifest.lock */,
 				3C1D107628E9DB6300AFC22A /* Sources */,
 				3C1D107728E9DB6300AFC22A /* Frameworks */,
 				3C1D107828E9DB6300AFC22A /* Resources */,
 				3C09198628F4A85500291EC4 /* Crashylitics Run Script */,
+				1C909FEC7562517714DAB00C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,6 +382,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C909FEC7562517714DAB00C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gloss/Pods-Gloss-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gloss/Pods-Gloss-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gloss/Pods-Gloss-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3C09198628F4A85500291EC4 /* Crashylitics Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +418,28 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
 		};
+		98DA118A99A14236507B88C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gloss-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -377,6 +451,7 @@
 				3C1D109C28E9DBA000AFC22A /* SplashView.swift in Sources */,
 				3CAA5A9F28FB594400A901B5 /* TabBarView.swift in Sources */,
 				3C7C4F5428FDBF2900AE38C5 /* GlossifyMLClass.mlmodel in Sources */,
+				3CC5A646290724A20052408B /* SkinDetailView.swift in Sources */,
 				3C1D108028E9DB6300AFC22A /* ContentView.swift in Sources */,
 				3C263E7428F2BB3B00927835 /* DashboardView.swift in Sources */,
 				3C5F0E7F2906FECD00AE0727 /* Skinproducts.swift in Sources */,
@@ -387,20 +462,22 @@
 				3C7C4F5628FDE77200AE38C5 /* SkinConcernsClass.swift in Sources */,
 				3CB4262B28E9E84500EEE1A7 /* OffsetTab.swift in Sources */,
 				3C1D107E28E9DB6300AFC22A /* GlossApp.swift in Sources */,
+				3CC5A64A29072D250052408B /* Beautyproducts.swift in Sources */,
 				3C263E7C28F307E000927835 /* LoginView.swift in Sources */,
 				3C5F0E812907002D00AE0727 /* SkinproductsViewModel.swift in Sources */,
 				3C633EE92905673F00EC4737 /* Beauty.swift in Sources */,
 				3C3E8E2728FB7F9D00C55343 /* EditView.swift in Sources */,
 				3C633EE529051C9900EC4737 /* FaceFilterView.swift in Sources */,
+				3CC5A64C290731230052408B /* FaceFilterViewModel.swift in Sources */,
 				3C633EEB290569F300EC4737 /* FirestoreViewModel.swift in Sources */,
 				3C633EE72905651D00EC4737 /* GlossifySkinToneMLClass.mlmodel in Sources */,
 				3C6B535B28FD322D008E5653 /* FaceScanView.swift in Sources */,
 				3C263E7828F2BCFA00927835 /* BoardRegister.swift in Sources */,
 				3C6B536428FD5E38008E5653 /* UIImageService.swift in Sources */,
 				3C6B536728FD686D008E5653 /* ImagePicker.swift in Sources */,
+				3CC5A64829072CAA0052408B /* BeautyproductsViewModel.swift in Sources */,
 				3C6B536928FD92E0008E5653 /* AiTabBarView.swift in Sources */,
 				3C5F0E7A29068D3700AE0727 /* SkinProductsView.swift in Sources */,
-				3C0D037728F4BC4400E3839D /* ForgotPassView.swift in Sources */,
 				3C6B535D28FD35DF008E5653 /* FaceAi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +601,7 @@
 		};
 		3C1D108928E9DB6400AFC22A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA8CC5165F6E1A30F05C7A4A /* Pods-Gloss.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -559,6 +637,7 @@
 		};
 		3C1D108A28E9DB6400AFC22A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0974CA77C39D860EC22A144B /* Pods-Gloss.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -4,16 +4,21 @@
 //
 //  Created by Jeandré De Villiers on 2022/10/24.
 //
-
 import SwiftUI
 import Firebase
 import FirebaseAuth
-
+import SDWebImageSwiftUI
+//import SwiftDrawer
 
 struct BeautyProductsView: View {
-    
     @State var userIsLoggedIn: Bool = true
+    @State private var showingCredits = false
 
+    @ObservedObject private var beauties = BeautyproductsViewModel()
+    @State var isShowingSheet = false
+    
+    let colums = [GridItem(.flexible()), GridItem(.flexible())]
+    
     
     var body: some View {
         ZStack{
@@ -66,7 +71,7 @@ struct BeautyProductsView: View {
                 Text("BEAUTY CARE")
                     .font(.custom("DreamAvenue", size: 40))
                     .foregroundColor(Color("Black"))
-                    .padding(.leading, -75)
+                    .padding(.leading, -80)
                     .padding(.top, 2)
                 
                 HStack{
@@ -98,7 +103,7 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("FOUNDATION")
+                                Text("SERUM")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -116,7 +121,7 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("LIPSTICK")
+                                Text("CREAM")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -135,7 +140,7 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("MASSCARA")
+                                Text("MASK")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -153,27 +158,7 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("KITS")
-                                    .font(.custom("Livvic-SemiBoldItalic", size: 12))
-                                    .foregroundColor(Color("Black"))
-                                    .padding(.top, 1)
-                                    .multilineTextAlignment(.center)
-                            }//ZStack
-                        })//Button
-                        
-                        
-                        
-                        Button(action: {
-                            //do filter
-                            
-                        }, label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color("MediumLight"))
-                                    .frame(width: 100, height: 35)
-                                    .padding(.top, 1)
-                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("POWDER")
+                                Text("LOTION")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -193,7 +178,27 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("EYESHADOW")
+                                Text("TONER")
+                                    .font(.custom("Livvic-SemiBoldItalic", size: 12))
+                                    .foregroundColor(Color("Black"))
+                                    .padding(.top, 1)
+                                    .multilineTextAlignment(.center)
+                            }//ZStack
+                        })//Button
+                        
+                        
+                        
+                        Button(action: {
+                            //do filter
+                            
+                        }, label: {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 30)
+                                    .fill(Color("MediumLight"))
+                                    .frame(width: 100, height: 35)
+                                    .padding(.top, 1)
+                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                                Text("CLEANSER")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -205,77 +210,57 @@ struct BeautyProductsView: View {
                         .padding(.top, 10)
                 }
                 ScrollView{
-                    HStack(spacing: 20){
-                        
-                        VStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                    .fill(Color("White"))
-                                    .frame(width: 160, height: 160)
-                                    .padding(.top, 20)
-                                    .opacity(0.5)
+                    LazyVGrid(columns: colums){
+                        ForEach(beauties.beautyproducts){beautyproduct in
+                            VStack{
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                        .fill(Color("White"))
+                                        .frame(width: 160, height: 160)
+                                        .padding(.top, 20)
+                                        .opacity(1)
+                                    
+                                    NavigationLink(destination:
+                                                    SkinDetailView()
+                                        .navigationBarBackButtonHidden(true)){
+                                            WebImage(url: URL(string:beautyproduct.image))
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 120, height: 120)
+                                        }
+//                                        .buttonStyle(PlainButtonStyle())
+//                                        .opacity(1)
+                                }
                                 
-                                Image("Google")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 160, height: 160)
-                                    .padding(.leading, 20)
-                                
-                                
+                                VStack{
+                                    
+                                    
+                                    
+                                    Text(beautyproduct.name)
+                                        .font(.custom("Livvic-SemiBold", size: 12))
+                                        .foregroundColor(Color("Black"))
+                                        .padding(.top, 10)
+                                        .padding(.leading, -10)
+                                    
+                                    Text(beautyproduct.category)
+                                        .font(.custom("Livvic-Regular", size: 15))
+                                        .foregroundColor(Color("Black"))
+                                        .padding(.top, -10)
+                                        .padding(.leading, -70)
+                                }
                             }
                             
-                            Text("Log In")
-                                .font(.custom("Livvic-SemiBold", size: 15))
-                                .foregroundColor(Color("Black"))
-                                .padding(.top, 10)
-                                .padding(.leading, -70)
-                            
-                            Text("Log In")
-                                .font(.custom("Livvic-Regular", size: 15))
-                                .foregroundColor(Color("Black"))
-                                .padding(.top, -10)
-                                .padding(.leading, -70)
                         }
-                        
-                        VStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                    .fill(Color("White"))
-                                    .frame(width: 160, height: 160)
-                                    .padding(.top, 20)
-                                    .opacity(0.5)
-                                
-                                Image("Google")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 160, height: 160)
-                                    .padding(.leading, 20)
-                                
-                                
-                            }
-                            
-                            Text("Log In")
-                                .font(.custom("Livvic-SemiBold", size: 15))
-                                .foregroundColor(Color("Black"))
-                                .padding(.top, 10)
-                                .padding(.leading, -70)
-                            
-                            Text("Log In")
-                                .font(.custom("Livvic-Regular", size: 15))
-                                .foregroundColor(Color("Black"))
-                                .padding(.top, -10)
-                                .padding(.leading, -70)
-                        }
-                        
-                        
-                        
                     }
+                    
+                 
                 }
             }
+        }.onAppear(){
+            self.beauties.fetchBeautyproducts()
         }
     }
 }
-
 struct BeautyProductsView_Previews: PreviewProvider {
     static var previews: some View {
         BeautyProductsView()

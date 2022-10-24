@@ -34,34 +34,17 @@ struct OnboardingView: View {
                             VStack(spacing: 50){
                                 
                                 HStack{
-                                    HStack{
                                         Image("LogoMain")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                             .padding(1)
                                             
-                                            .frame(width: 100, height: 100, alignment: .center)
-                                    Spacer()
-                                        
-                                        
-                                      
-                                            Button{
-                                                offset = min(offset + getScreenBounds().width * 2,
-                                                    getScreenBounds().width * 2)
-                                            }label: {
-                                                Text("Skip")
-                                                    .font(.custom("Livvic-Regular", size: 15))
-                                                    .foregroundColor(Color("Black"))
-                                                    .multilineTextAlignment(.center)
-                                                    .padding(40)
-                                                    
-                                            
-                                                 
-                                            }
+                                            .frame(width: 100, height: 100, alignment: .leading)
+               
                                     
                                     }.padding(.top, -40)
-                            
-                                }
+                                    .padding(.leading, -180)
+                          
                                 
                                 Image(screen.image)
                                     .resizable()

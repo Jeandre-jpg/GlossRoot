@@ -1,0 +1,6 @@
+framework module Pods_Gloss {
+  umbrella header "Pods-Gloss-umbrella.h"
+
+  export *
+  module * { export * }
+}

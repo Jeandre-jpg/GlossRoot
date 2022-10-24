@@ -66,30 +66,10 @@ struct LoginView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 5)
                 
-          
+          Spacer()
+                    .frame(height: 30)
                 
                 VStack{
-                    
-                    RoundedRectangle(cornerRadius: 25, style: .continuous)
-                        .fill(Color("Pink"))
-                        .border(Color("Grey"))
-                        .frame(width: 350, height: 50)
-                        .padding(.top, 20)
-                        .opacity(0.5)
-                    
-                    
-                    HStack(spacing: 10){
-                        Image("Facebook")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 25, height: 25)
-                        
-                        Image("Google")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.leading, 20)
-                    }.padding(.top, -50)
                     
                     HStack(spacing: 10){
                         Rectangle()
@@ -97,7 +77,7 @@ struct LoginView: View {
                             .frame(height: 1)
                             .padding(.leading)
                         
-                        Text("OR")
+                        Text("Let's do it")
                             .font(.custom("DreamAvenue", size: 12))
                             .foregroundColor(Color("Grey"))
                             .multilineTextAlignment(.center)
@@ -111,7 +91,8 @@ struct LoginView: View {
                     }
                     .padding(10)
                     
-                    
+                    Spacer()
+                              .frame(height: 30)
                     
                     Text("Email Adress *")
                         .font(.custom("Livvic-Medium", size: 15))
@@ -150,26 +131,8 @@ struct LoginView: View {
                         .opacity(0.7)
                         .frame(width: 350, height: 70)
                     
-                    
-                    Button{
-                        offset = min(offset + getScreenBounds().width * 2,
-                                     getScreenBounds().width * 2)
-                        
-                    }label: {
-                        NavigationLink(destination:
-                                        ForgotPassView()
-                            .navigationBarBackButtonHidden(true)){
-                            Text("Forgot Password?")
-                                .font(.custom("Livvic-SemiBoldItalic", size: 12))
-                                .foregroundColor(Color("Brown"))
-                                .multilineTextAlignment(.trailing)
-                                .padding(.top, 5)
-                                .padding(.leading, 250)
-                                .padding(.bottom, -10)
-                                
-                            }//Nav
-                }//Button
-                
+                    Spacer()
+                              .frame(height: 10)
                 
                     
                     Button(action: {
