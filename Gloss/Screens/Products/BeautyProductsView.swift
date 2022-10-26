@@ -13,6 +13,8 @@ import SDWebImageSwiftUI
 struct BeautyProductsView: View {
     @State var userIsLoggedIn: Bool = true
     @State private var showingCredits = false
+    
+    
 
     @ObservedObject private var beauties = BeautyproductsViewModel()
     @State var isShowingSheet = false
@@ -73,6 +75,8 @@ struct BeautyProductsView: View {
                     .foregroundColor(Color("Black"))
                     .padding(.leading, -80)
                     .padding(.top, 2)
+                
+                
                 
                 HStack{
                     
@@ -214,22 +218,22 @@ struct BeautyProductsView: View {
                         ForEach(beauties.beautyproducts){beautyproduct in
                             VStack{
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                        .fill(Color("White"))
-                                        .frame(width: 160, height: 160)
-                                        .padding(.top, 20)
-                                        .opacity(1)
-                                    
                                     NavigationLink(destination:
-                                                    SkinDetailView()
+                                                    BeautyDetailView(beautyproduct: beautyproduct)
                                         .navigationBarBackButtonHidden(true)){
+                                            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                                .fill(Color("White"))
+                                                .frame(width: 160, height: 160)
+                                                .padding(.top, 20)
+                                                .opacity(1)
+                                            
+                                        }
                                             WebImage(url: URL(string:beautyproduct.image))
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(width: 120, height: 120)
-                                        }
-//                                        .buttonStyle(PlainButtonStyle())
-//                                        .opacity(1)
+                                        
+
                                 }
                                 
                                 VStack{

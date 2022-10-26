@@ -18,8 +18,15 @@ struct Beautyproducts: Identifiable{
     var shades: Int
     var size: String
     var skintone: String
-    var steps: String
+    var steps: [Steps]
     var subtitle: String
     var tutorial: String
     var wherebuy: String
+}
+
+struct Steps: Identifiable{
+    var id = UUID()
+    var title: String
+    var description: String
+    var image: String
 }

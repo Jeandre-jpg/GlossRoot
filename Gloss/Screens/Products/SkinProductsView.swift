@@ -16,6 +16,7 @@ struct SkinProductsView: View {
     @State private var showingCredits = false
 
     @ObservedObject private var skins = SkinproductsViewModel()
+
     @State var isShowingSheet = false
     
     let colums = [GridItem(.flexible()), GridItem(.flexible())]
@@ -222,7 +223,7 @@ struct SkinProductsView: View {
                                         .opacity(1)
                                     
                                     NavigationLink(destination:
-                                                    SkinDetailView()
+                                                    SkinDetailView(skinproduct2:skinproduct)
                                         .navigationBarBackButtonHidden(true)){
                                             WebImage(url: URL(string:skinproduct.image))
                                                 .resizable()

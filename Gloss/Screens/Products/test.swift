@@ -1,24 +1,16 @@
 //
-//  SkinDetailView.swift
+//  test.swift
 //  Gloss
 //
-//  Created by Jeandré De Villiers on 2022/10/24.
+//  Created by Jeandré De Villiers on 2022/10/26.
 //
 
 import SwiftUI
 import Firebase
 import FirebaseAuth
 import SDWebImageSwiftUI
-//import SwiftDrawer
 
-struct SkinDetailView: View {
-   
-    @State private var showingCredits = false
-
-    @ObservedObject private var skinproduct = SkinproductsViewModel()
-    var skinproduct2 : Skinproducts
-
-    
+struct test: View {
     var body: some View {
         ZStack{
             Color("Pink")
@@ -32,64 +24,64 @@ struct SkinDetailView: View {
                         .opacity(1)
                     
                     
-                    WebImage(url: URL(string:skinproduct2.image))
+                    Image("test")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 300, height: 200)
                 }
-                .padding(.top,
-                         50)
                 
                 VStack(spacing: 20){
+                    Text("Title")
+                        .font(.custom("Livvic-SemiBold", size: 20))
+                        .foregroundColor(Color("Brown"))
+                        .frame(width: 300, height: 100)
+                    
+                    Text("subtitle")
+                        .font(.custom("Livvic-SemiBold", size: 15))
+                        .foregroundColor(Color("Brown"))
+                        .opacity(0.9)
+                        
                     VStack{
-                        Text(skinproduct2.name)
-                            .font(.custom("Livvic-SemiBold", size: 20))
+                        
+                        Text("lololol")
+                            .font(.custom("Livvic-Regular", size: 12))
                             .foregroundColor(Color("Brown"))
-                            .frame(width: 200, height: 100)
-                        
-                        Text(skinproduct2.subtitle)
-                            .font(.custom("Livvic-Regular", size: 15))
-                            .foregroundColor(Color("Brown"))
-                            .frame(width: 200, height: 100)
+                            .opacity(0.9)
+                            .frame(width: 350, height: 100)
                     }
-                    .frame(width: 300, height: 100)
-                    .frame(alignment: .center)
+                    .padding(.leading, -170)
+                    .frame(alignment: .leading)
                     .ignoresSafeArea()
-                        
-                    HStack{
-                        VStack{
-                            
-                            Text("Price")
-                                .font(.custom("Livvic-Bold", size: 15))
-                                .foregroundColor(Color("Black"))
-                            
-                            Text(String(skinproduct2.price))
-                                .font(.custom("Livvic-Regular", size: 12))
-                                .foregroundColor(Color("Black"))
-                        }
-                        
-                        Spacer()
-                            .frame(width: 200)
-                        
-                        VStack{
-                            
-                            Text("Size")
-                                .font(.custom("Livvic-Bold", size: 15))
-                                .foregroundColor(Color("White"))
-                            
-                           
-                                Text(skinproduct2.size)
-                                .font(.custom("Livvic-Regular", size: 12))
-                                .foregroundColor(Color("Black"))
-                            
-                        }
+                    
+                    Text("Price")
+                       .font(.custom("Livvic-Bold", size: 15))
+                       .foregroundColor(Color("Black"))
+              
+            
+
+                   Text("RRR")
+                       .font(.custom("Livvic-Regular", size: 12))
+                       .foregroundColor(Color("Black"))
+                    
+                    Text("Size")
+                        .font(.custom("Livvic-Bold", size: 15))
+                        .foregroundColor(Color("White"))
+
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color("MediumLight"))
+                            .frame(width: 100, height: 35)
+                            .padding(.top, 1)
+                            .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                        Text("SERUM")
+                            .font(.custom("Livvic-SemiBoldItalic", size: 12))
+                            .foregroundColor(Color("Black"))
+                            .multilineTextAlignment(.center)
                     }
-                    .frame(width: 300, height: 100)
-                    .frame(alignment: .center)
-                    .ignoresSafeArea()
                 }
-                
-                
+                .padding(.leading, -170)
+                .frame(alignment: .leading)
+                .ignoresSafeArea()
                 
                     ScrollView(.horizontal, showsIndicators: false){
                         
@@ -151,62 +143,58 @@ struct SkinDetailView: View {
                            .padding(.bottom, 20)
                            .padding(.top, 30)
                         
-                   
+                        VStack{
+                            
+                            Text("subtitle")
+                                .font(.custom("Livvic-SemiBold", size: 15))
+                                .foregroundColor(Color("Brown"))
+                                .opacity(0.9)
+                        }
+                        .padding(.leading, -140)
+                        .frame(alignment: .leading)
+                        .ignoresSafeArea()
+                        
+                        Button(action: {
+                           
+                            
+                        }, label: {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 30)
+                                    .fill(Color("Brown"))
+                                    .frame(width: 350, height: 50)
+                                    .padding(.top, 20)
+                                    .padding(.leading, 10)
+                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                                
+                       
+                                        Text("Let's Shop!")
+                                            .font(.custom("Livvic-SemiBoldItalic", size: 15))
+                                            .foregroundColor(Color("White"))
+                                            .padding(.top, 20)
+                                            .multilineTextAlignment(.center)
+                                
+                                        
+
+                            }//ZStack
+                            .padding(.leading, 10)
+                            .frame(alignment: .leading)
+                            .ignoresSafeArea()
+                        })//Button
+                        
                        
                     }
-                
-                VStack{
-                    
-                    Text(skinproduct2.description)
-                        .font(.custom("Livvic-Regular", size: 12))
-                        .foregroundColor(Color("Brown"))
-                        .opacity(0.9)
-                       
-                }
-                .frame(width: 300, height: 100)
-                .frame(alignment: .center)
-                .ignoresSafeArea()
-                
-                Button(action: {
-                   
-                    
-                }, label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color("Brown"))
-                            .frame(width: 350, height: 50)
-                            .padding(.top, 20)
-                            .padding(.leading, 10)
-                            .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                        
-               
-                                Text("Let's Shop!")
-                                    .font(.custom("Livvic-SemiBoldItalic", size: 15))
-                                    .foregroundColor(Color("White"))
-                                    .padding(.top, 20)
-                                    .multilineTextAlignment(.center)
-                        
-                                
-
-                    }//ZStack
-                   
-                })//Button
-                
                        
                 
-            } .padding(.leading, 10)
-                .frame(alignment: .leading)
-                .ignoresSafeArea()
+            }
             
             
         }.ignoresSafeArea()
 
     }
 }
-
-struct SkinDetailView_Previews: PreviewProvider {
+   
+struct test_Previews: PreviewProvider {
     static var previews: some View {
-        SkinDetailView(skinproduct2:Skinproducts(category: "", description: "", image: "", ingredients: "", name: "", price: 0, size: "", skinconcern: "", skintype: "", subtitle: "", tutorial: "", wherebuy: ""))
+        test()
     }
 }
- 

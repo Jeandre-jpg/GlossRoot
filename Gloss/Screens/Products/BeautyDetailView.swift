@@ -1,25 +1,19 @@
 //
-//  SkinDetailView.swift
+//  BeautyDetailView.swift
 //  Gloss
 //
-//  Created by Jeandré De Villiers on 2022/10/24.
+//  Created by Jeandré De Villiers on 2022/10/25.
 //
 
 import SwiftUI
 import Firebase
 import FirebaseAuth
 import SDWebImageSwiftUI
-//import SwiftDrawer
 
-struct SkinDetailView: View {
-   
-    @State private var showingCredits = false
-
-    @ObservedObject private var skinproduct = SkinproductsViewModel()
-    var skinproduct2 : Skinproducts
-
-    
+struct BeautyDetailView: View {
+    var beautyproduct : Beautyproducts
     var body: some View {
+        
         ZStack{
             Color("Pink")
                 .ignoresSafeArea()
@@ -32,7 +26,7 @@ struct SkinDetailView: View {
                         .opacity(1)
                     
                     
-                    WebImage(url: URL(string:skinproduct2.image))
+                    WebImage(url: URL(string:beautyproduct.image))
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 300, height: 200)
@@ -42,12 +36,12 @@ struct SkinDetailView: View {
                 
                 VStack(spacing: 20){
                     VStack{
-                        Text(skinproduct2.name)
+                        Text(beautyproduct.name)
                             .font(.custom("Livvic-SemiBold", size: 20))
                             .foregroundColor(Color("Brown"))
                             .frame(width: 200, height: 100)
                         
-                        Text(skinproduct2.subtitle)
+                        Text(beautyproduct.subtitle)
                             .font(.custom("Livvic-Regular", size: 15))
                             .foregroundColor(Color("Brown"))
                             .frame(width: 200, height: 100)
@@ -63,7 +57,7 @@ struct SkinDetailView: View {
                                 .font(.custom("Livvic-Bold", size: 15))
                                 .foregroundColor(Color("Black"))
                             
-                            Text(String(skinproduct2.price))
+                            Text(String(beautyproduct.price))
                                 .font(.custom("Livvic-Regular", size: 12))
                                 .foregroundColor(Color("Black"))
                         }
@@ -78,7 +72,7 @@ struct SkinDetailView: View {
                                 .foregroundColor(Color("White"))
                             
                            
-                                Text(skinproduct2.size)
+                                Text(beautyproduct.size)
                                 .font(.custom("Livvic-Regular", size: 12))
                                 .foregroundColor(Color("Black"))
                             
@@ -157,7 +151,7 @@ struct SkinDetailView: View {
                 
                 VStack{
                     
-                    Text(skinproduct2.description)
+                    Text(beautyproduct.description)
                         .font(.custom("Livvic-Regular", size: 12))
                         .foregroundColor(Color("Brown"))
                         .opacity(0.9)
@@ -204,9 +198,8 @@ struct SkinDetailView: View {
     }
 }
 
-struct SkinDetailView_Previews: PreviewProvider {
+struct BeautyDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SkinDetailView(skinproduct2:Skinproducts(category: "", description: "", image: "", ingredients: "", name: "", price: 0, size: "", skinconcern: "", skintype: "", subtitle: "", tutorial: "", wherebuy: ""))
+        BeautyDetailView(beautyproduct: Beautyproducts(id: "", category: "", description: "", image: "", ingredients: "", name: "", price: 0, shades: 0, size: "", skintone: "", steps: [Steps(title: "", description: "", image: "")], subtitle: "", tutorial: "", wherebuy: ""))
     }
 }
- 
