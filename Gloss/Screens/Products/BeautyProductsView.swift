@@ -215,7 +215,7 @@ struct BeautyProductsView: View {
                 }
                 ScrollView{
                     LazyVGrid(columns: colums){
-                        ForEach(beauties.beautyproducts){beautyproduct in
+                        ForEach(beauties.beautyproducts,  id: \.self){beautyproduct in
                             VStack{
                                 ZStack{
                                     NavigationLink(destination:

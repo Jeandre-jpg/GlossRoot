@@ -38,6 +38,7 @@ struct SplashView: View {
                 .multilineTextAlignment(.center)
                 .padding(20)
                 
+             
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 150, height: 2)
                     .padding(.top, -30)

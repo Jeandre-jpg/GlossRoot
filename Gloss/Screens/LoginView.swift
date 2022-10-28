@@ -138,6 +138,7 @@ struct LoginView: View {
                     Button(action: {
                         vm.signIn(email: email, password: password)
                         
+                        
                     }, label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 30)
@@ -156,7 +157,7 @@ struct LoginView: View {
 
                         }//ZStack
                     })//Button
-                    
+                    .accessibilityIdentifier("loginButton")
                     
                     NavigationLink(destination:
                                     BoardingRegister()

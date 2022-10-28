@@ -54,7 +54,7 @@ struct FaceFilterView: View {
                 
                 ScrollView(.horizontal){
                     HStack{
-                        ForEach(beauties.beautyproducts){beautyproduct in
+                        ForEach(beauties.beautyproducts,  id: \.self){beautyproduct in
                             
                             HStack{
                                

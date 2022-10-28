@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Beautyproducts: Identifiable{
-    var id: String = UUID().uuidString
+struct Beautyproducts: Hashable{
+    var id = UUID()
     var category: String
     var description: String
     var image: String
@@ -24,7 +24,7 @@ struct Beautyproducts: Identifiable{
     var wherebuy: String
 }
 
-struct Steps: Identifiable{
+struct Steps: Hashable{
     var id = UUID()
     var title: String
     var description: String

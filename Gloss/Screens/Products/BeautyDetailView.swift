@@ -200,6 +200,6 @@ struct BeautyDetailView: View {
 
 struct BeautyDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BeautyDetailView(beautyproduct: Beautyproducts(id: "", category: "", description: "", image: "", ingredients: "", name: "", price: 0, shades: 0, size: "", skintone: "", steps: [Steps(title: "", description: "", image: "")], subtitle: "", tutorial: "", wherebuy: ""))
+        BeautyDetailView(beautyproduct: Beautyproducts(category: "", description: "", image: "", ingredients: "", name: "", price: 0, shades: 0, size: "", skintone: "", steps: [Steps(title: "", description: "", image: "")], subtitle: "", tutorial: "", wherebuy: ""))
     }
 }
