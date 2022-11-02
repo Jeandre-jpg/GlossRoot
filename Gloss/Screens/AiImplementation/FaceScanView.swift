@@ -27,6 +27,7 @@ struct FaceScanView: View {
     @State private var classLabel: String = ""
     @State private var departmentLabel: String = ""
     
+    
     private let classifier = try! SkinConcernsClass(mlModel: GlossifyMLClass(configuration: MLModelConfiguration()).model)
     
     private let department = try! SkinConcernsClass(mlModel: GlossifySkinToneMLClass(configuration: MLModelConfiguration()).model)
@@ -205,23 +206,48 @@ struct FaceScanView: View {
             if showsBlob {
                 
                 VStack{
-                    
-                    Image("BlobAi")
-                        .frame(width: 300, height: 300, alignment: .center)
-                        .padding(.top, -870)
-    
-                    Text(classLabel)
-                        .font(.custom("Livvic-Medium", size: 15))
-                        .foregroundColor(Color("Black"))
-                        .padding(10)
-                        .padding(.top, -750)
-                    
-                    Text(departmentLabel)
-                        .font(.custom("Livvic-Medium", size: 15))
-                        .foregroundColor(Color("Black"))
-                        .padding(10)
-                        .padding(.top, 10)
-                    
+                    ZStack{
+                        Image("BlobAi")
+                            .frame(width: 300, height: 300, alignment: .center)
+                            .padding(.top, -870)
+                        
+                        Text(classLabel)
+                            .font(.custom("Livvic-Medium", size: 15))
+                            .foregroundColor(Color("Black"))
+                            .padding(10)
+                            .padding(.top, -760)
+                        
+                        Text(departmentLabel)
+                            .font(.custom("Livvic-Medium", size: 15))
+                            .foregroundColor(Color("Black"))
+                            .padding(10)
+                            .padding(.top, 10)
+                            .padding(.top, -740)
+                        
+                        NavigationLink(destination:
+                                        SkinConcernView(beautyFilter2: .constant(classLabel))
+                            .navigationBarBackButtonHidden(true)){
+                                
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .fill(Color("Brown"))
+                                        .frame(width: 150, height: 50)
+                                        .padding(.top, 120)
+                                    
+                                    
+                                    
+                                    Text("My Products")
+                                        .font(.custom("Livvic-SemiBoldItalic", size: 15))
+                                        .foregroundColor(Color("White"))
+                                        .padding(.top, 120)
+                                        .multilineTextAlignment(.center)
+                                    
+                                    
+                                }//ZStack
+                                
+                            }.padding(.top, -790)
+                        
+                    }
                 }
             }
 

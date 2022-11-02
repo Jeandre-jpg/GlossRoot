@@ -13,6 +13,11 @@ class SkinproductsViewModel: ObservableObject{
     @Published var skinproducts = [Skinproducts]()
     private var db = Firestore.firestore()
     
+    
+    init(){
+        fetchSkinproducts()
+    }
+    
     func fetchSkinproducts(){
         db.collection("skinproducts").addSnapshotListener{(querySnapshot, error) in
             guard let documents = querySnapshot?.documents else{

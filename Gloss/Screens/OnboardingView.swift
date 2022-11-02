@@ -29,11 +29,13 @@ struct OnboardingView: View {
                     
                     
                 HStack(spacing: 0){
+                    
                     ForEach(boarding){screen in
                         VStack{
                             VStack(spacing: 50){
                                 
                                 HStack{
+                                    
                                         Image("LogoMain")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
@@ -80,7 +82,11 @@ struct OnboardingView: View {
                         .frame(maxHeight: .infinity)
                         
                     }
+                    
+                    
                 }
+                
+                
                 .background(Color("Pink"))
                
                 
@@ -123,9 +129,9 @@ struct OnboardingView: View {
                                             .padding(20)
                                             .multilineTextAlignment(.center)
                                             .underline()
+                                    }.onTapGesture{
+                                        isOnboarding = false
                                     }
-                                }.onTapGesture{
-                                    isOnboarding = false
                                 }
                 
            

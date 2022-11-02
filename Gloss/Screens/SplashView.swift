@@ -26,7 +26,6 @@ struct SplashView: View {
                 .ignoresSafeArea()
             
             VStack{
-                
                 Image("LogoMain")
                     .resizable()
                     .aspectRatio(contentMode: .fill)

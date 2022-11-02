@@ -13,7 +13,7 @@ import SDWebImageSwiftUI
 struct BeautyProductsView: View {
     @State var userIsLoggedIn: Bool = true
     @State private var showingCredits = false
-    
+    @State private var beautyFilter: String = "All"
     
 
     @ObservedObject private var beauties = BeautyproductsViewModel()
@@ -84,21 +84,21 @@ struct BeautyProductsView: View {
                         .font(.custom("Livvic-SemiBold", size: 12))
                         .foregroundColor(Color("Brown"))
                         .padding(.leading, -160)
-                        .padding(.top, 30)
+                        .padding(.top, 10)
                     
-                    Text("(40)")
+                    Text("(\(beauties.beautyproducts.count))")
                         .font(.custom("Livvic-SemiBold", size: 12))
                         .foregroundColor(Color("Brown"))
                         .padding(.leading, -70)
-                        .padding(.top, 30)
+                        .padding(.top, 10)
                 }
                 
                 ScrollView(.horizontal, showsIndicators: false){
                     
                     HStack(spacing: 15){
-                        
                         Button(action: {
                             //do filter
+                            beautyFilter = "All"
                             
                         }, label: {
                             ZStack{
@@ -107,7 +107,7 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("SERUM")
+                                Text("ALL")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -117,6 +117,7 @@ struct BeautyProductsView: View {
                         
                         Button(action: {
                             //do filter
+                            beautyFilter = "Eyeliner"
                             
                         }, label: {
                             ZStack{
@@ -125,7 +126,26 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("CREAM")
+                                Text("EYELINER")
+                                    .font(.custom("Livvic-SemiBoldItalic", size: 12))
+                                    .foregroundColor(Color("Black"))
+                                    .padding(.top, 1)
+                                    .multilineTextAlignment(.center)
+                            }//ZStack
+                        })//Button
+                        
+                        Button(action: {
+                            //do filter
+                            beautyFilter = "Eyeshadow"
+                            
+                        }, label: {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 30)
+                                    .fill(Color("MediumLight"))
+                                    .frame(width: 100, height: 35)
+                                    .padding(.top, 1)
+                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                                Text("EYESHADOW")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -136,7 +156,7 @@ struct BeautyProductsView: View {
                         
                         Button(action: {
                             //do filter
-                            
+                            beautyFilter = "Brow Pencil"
                         }, label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 30)
@@ -144,7 +164,7 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("MASK")
+                                Text("BROW PENCIL")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -154,7 +174,7 @@ struct BeautyProductsView: View {
                         
                         Button(action: {
                             //do filter
-                            
+                            beautyFilter = "Foundation"
                         }, label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 30)
@@ -162,7 +182,7 @@ struct BeautyProductsView: View {
                                     .frame(width: 100, height: 35)
                                     .padding(.top, 1)
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                Text("LOTION")
+                                Text("FOUNDATION")
                                     .font(.custom("Livvic-SemiBoldItalic", size: 12))
                                     .foregroundColor(Color("Black"))
                                     .padding(.top, 1)
@@ -174,7 +194,7 @@ struct BeautyProductsView: View {
                         
                         Button(action: {
                             //do filter
-                            
+                            beautyFilter = "Toner"
                         }, label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 30)
@@ -194,7 +214,7 @@ struct BeautyProductsView: View {
                         
                         Button(action: {
                             //do filter
-                            
+                            beautyFilter = "Cleanser"
                         }, label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 30)
@@ -216,43 +236,85 @@ struct BeautyProductsView: View {
                 ScrollView{
                     LazyVGrid(columns: colums){
                         ForEach(beauties.beautyproducts,  id: \.self){beautyproduct in
-                            VStack{
-                                ZStack{
-                                    NavigationLink(destination:
-                                                    BeautyDetailView(beautyproduct: beautyproduct)
-                                        .navigationBarBackButtonHidden(true)){
-                                            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                                .fill(Color("White"))
-                                                .frame(width: 160, height: 160)
-                                                .padding(.top, 20)
-                                                .opacity(1)
-                                            
-                                        }
-                                            WebImage(url: URL(string:beautyproduct.image))
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(width: 120, height: 120)
-                                        
-
-                                }
+                            if beautyFilter == "All"{
                                 
+                                    ZStack{
+                                        NavigationLink(destination:
+                                                        BeautyDetailView(beautyproduct: beautyproduct)
+                                            .navigationBarBackButtonHidden(true)){
+                                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                                    .fill(Color("White"))
+                                                    .frame(width: 160, height: 160)
+                                                    .padding(.top, 20)
+                                                    .opacity(1)
+                                                
+                                            }
+                                                WebImage(url: URL(string:beautyproduct.image))
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 120, height: 120)
+                                            
+
+                                    }
+                                    
+                                    VStack{
+                                        
+                                        
+                                        
+                                        Text(beautyproduct.name)
+                                            .font(.custom("Livvic-SemiBold", size: 12))
+                                            .foregroundColor(Color("Black"))
+                                            .padding(.top, 10)
+                                            .padding(.leading, -10)
+                                        
+                                        Text(beautyproduct.category)
+                                            .font(.custom("Livvic-Regular", size: 15))
+                                            .foregroundColor(Color("Black"))
+                                            .padding(.top, -10)
+                                            .padding(.leading, -70)
+                                    }
+                                
+                            }else if beautyproduct.category == beautyFilter{
                                 VStack{
+                                    ZStack{
+                                        NavigationLink(destination:
+                                                        BeautyDetailView(beautyproduct: beautyproduct)
+                                            .navigationBarBackButtonHidden(true)){
+                                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                                    .fill(Color("White"))
+                                                    .frame(width: 160, height: 160)
+                                                    .padding(.top, 20)
+                                                    .opacity(1)
+                                                
+                                            }
+                                                WebImage(url: URL(string:beautyproduct.image))
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 120, height: 120)
+                                            
+
+                                    }
                                     
-                                    
-                                    
-                                    Text(beautyproduct.name)
-                                        .font(.custom("Livvic-SemiBold", size: 12))
-                                        .foregroundColor(Color("Black"))
-                                        .padding(.top, 10)
-                                        .padding(.leading, -10)
-                                    
-                                    Text(beautyproduct.category)
-                                        .font(.custom("Livvic-Regular", size: 15))
-                                        .foregroundColor(Color("Black"))
-                                        .padding(.top, -10)
-                                        .padding(.leading, -70)
+                                    VStack{
+                                        
+                                        
+                                        
+                                        Text(beautyproduct.name)
+                                            .font(.custom("Livvic-SemiBold", size: 12))
+                                            .foregroundColor(Color("Black"))
+                                            .padding(.top, 10)
+                                            .padding(.leading, -10)
+                                        
+                                        Text(beautyproduct.category)
+                                            .font(.custom("Livvic-Regular", size: 15))
+                                            .foregroundColor(Color("Black"))
+                                            .padding(.top, -10)
+                                            .padding(.leading, -70)
+                                    }
                                 }
                             }
+                            
+
                             
                         }
                     }

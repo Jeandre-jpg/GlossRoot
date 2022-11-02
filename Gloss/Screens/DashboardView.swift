@@ -9,7 +9,6 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
-
 struct DashboardView: View {
     
     @State var optionSelected = 0
