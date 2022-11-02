@@ -66,40 +66,44 @@ struct LoginView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 5)
                 
-          Spacer()
-                    .frame(height: 30)
                 
-                VStack{
+                VStack(spacing: 10){
                     
-                    HStack(spacing: 10){
-                        Rectangle()
-                            .fill(Color("Grey"))
-                            .frame(height: 1)
-                            .padding(.leading)
+                 
+                    
+                    VStack{
                         
-                        Text("Let's do it")
-                            .font(.custom("DreamAvenue", size: 12))
-                            .foregroundColor(Color("Grey"))
-                            .multilineTextAlignment(.center)
-                            .padding(.top, 0)
+                        HStack(spacing: 10){
+                            Rectangle()
+                                .fill(Color("Grey"))
+                                .frame(height: 1)
+                                .padding(.leading)
+                            
+                            Text("Let's do it")
+                                .font(.custom("DreamAvenue", size: 20))
+                                .foregroundColor(Color("Grey"))
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 0)
+                            
+                            Rectangle()
+                                .fill(Color("Grey"))
+                                .frame(height: 1)
+                                .padding(.trailing)
+                            
+                        }
+                        .padding(.top, 50)
                         
-                        Rectangle()
-                            .fill(Color("Grey"))
-                            .frame(height: 1)
-                            .padding(.trailing)
-                        
-                    }
-                    .padding(10)
+                    }//VStack
                     
                     Spacer()
-                              .frame(height: 30)
+                              .frame(height: 20)
                     
                     Text("Email Adress *")
                         .font(.custom("Livvic-Medium", size: 15))
                         .foregroundColor(Color("Brown"))
                         .padding(.top, 5)
                         .padding(.leading, -170)
-                        .padding(.bottom, -10)
+                        .padding(.bottom, 5)
                     
                     
                     TextField("Email Adress", text: $email)
@@ -110,7 +114,7 @@ struct LoginView: View {
                         .disableAutocorrection(true)
                         .border(Color("Grey"))
                         .opacity(0.7)
-                    
+                        .padding(.bottom, 5)
                         .frame(width: 350, height: 70)
                     
                     Text("Password *")
@@ -118,7 +122,7 @@ struct LoginView: View {
                         .foregroundColor(Color("Brown"))
                         .padding(.top, 5)
                         .padding(.leading, -170)
-                        .padding(.bottom, -10)
+                        .padding(.bottom, 5)
                     
                     
                     SecureField("Password", text: $password)
@@ -130,6 +134,7 @@ struct LoginView: View {
                         .border(Color("Grey"))
                         .opacity(0.7)
                         .frame(width: 350, height: 70)
+                        .padding(.bottom, 5)
                     
                     Spacer()
                               .frame(height: 10)
@@ -144,14 +149,14 @@ struct LoginView: View {
                             RoundedRectangle(cornerRadius: 30)
                                 .fill(Color("Brown"))
                                 .frame(width: 350, height: 50)
-                                .padding(.top, 20)
+                                .padding(.top, 10)
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             
                    
                                     Text("Log In")
                                         .font(.custom("Livvic-SemiBoldItalic", size: 15))
                                         .foregroundColor(Color("White"))
-                                        .padding(.top, 20)
+                                        .padding(.top, 10)
                                         .multilineTextAlignment(.center)
                                     
 
@@ -166,7 +171,7 @@ struct LoginView: View {
                                 .font(.custom("Livvic-Regular", size: 12))
                                 .foregroundColor(Color("Black"))
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 10)
+                                .padding(.top, 20)
                                 .padding(.bottom, 10)
                             
                         }//Nav

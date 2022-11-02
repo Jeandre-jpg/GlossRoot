@@ -25,32 +25,46 @@ struct SkinConcernView: View {
     
     let colums = [GridItem(.flexible()), GridItem(.flexible())]
     
-
-    
-    
     var body: some View {
         ZStack{
             Color("Pink")
                 .ignoresSafeArea()
             
             VStack{
-                
                 HStack{
-                
-            Button(action: {
-                try? Auth.auth().signOut()
-            }, label: {
-                Image("logout")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .padding(1)
-                    .frame(width: 35, height: 35, alignment: .center)
-            })
-
-            Spacer()
+                    
+                    ZStack{
+                        NavigationLink(destination:
+                                        DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
+                            .navigationBarBackButtonHidden(true)){
+                                
+                                Image("back")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 10, alignment: .center)
+                                
+                                
+                            }
+                        
+                    }.offset(x: 10, y: 1)
+                       
+                    Spacer()
+                    
+                    Button(action: {
+                        try? Auth.auth().signOut()
+                    }, label: {
+                        Image("logout")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .padding(1)
+                            .frame(width: 35, height: 35, alignment: .center)
+                    })
                 }
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
+
+            Spacer()
+                
                 
                 Text("BASED ON YOUR")
                     .font(.custom("Livvic-Regular", size: 12))
@@ -58,18 +72,18 @@ struct SkinConcernView: View {
                     .padding(.leading, -170)
                     .padding(.top, 30)
                 
-                Text("SKIN CONCERN")
+                Text("SKIN CONCERNS")
                     .font(.custom("DreamAvenue", size: 40))
                     .foregroundColor(Color("Black"))
-                    .padding(.leading, -170)
+                    .padding(.leading, -50)
                     .padding(.top, 2)
                 
                 HStack{
                     
-                    Text("Products for \(beautyFilter2) ")
+                    Text("Products for \(beautyFilter2)")
                         .font(.custom("Livvic-SemiBold", size: 12))
                         .foregroundColor(Color("Brown"))
-                        .padding(.leading, -160)
+                        .padding(.leading, -170)
                         .padding(.top, 10)
                 }
                 
@@ -109,13 +123,13 @@ struct SkinConcernView: View {
                                           .font(.custom("Livvic-SemiBold", size: 12))
                                           .foregroundColor(Color("Black"))
                                           .padding(.top, 10)
-                                          .padding(.leading, 10)
+                                          .frame(width: 150, height: 50, alignment: .leading)
                                       
                                       Text(skinproduct.category)
                                           .font(.custom("Livvic-Regular", size: 15))
                                           .foregroundColor(Color("Black"))
-                                          .padding(.top, -10)
-                                          .padding(.leading, -70)
+                                          .padding(.top, -30)
+                                          .frame(width: 150, height: 50, alignment: .leading)
                                   }
                               }
                             }

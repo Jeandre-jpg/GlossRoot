@@ -231,8 +231,6 @@ struct SkinProductsView: View {
                                                        .aspectRatio(contentMode: .fit)
                                                        .frame(width: 120, height: 120)
                                                }
-        //                                        .buttonStyle(PlainButtonStyle())
-        //                                        .opacity(1)
                                        }
 
                                        VStack{
@@ -243,13 +241,13 @@ struct SkinProductsView: View {
                                                .font(.custom("Livvic-SemiBold", size: 12))
                                                .foregroundColor(Color("Black"))
                                                .padding(.top, 10)
-                                               .padding(.leading, -10)
+                                               .frame(width: 150, height: 70, alignment: .leading)
 
                                            Text(skinproduct.category)
                                                .font(.custom("Livvic-Regular", size: 15))
                                                .foregroundColor(Color("Black"))
-                                               .padding(.top, -10)
-                                               .padding(.leading, -80)
+                                               .padding(.top, -30)
+                                               .frame(width: 150, height: 50, alignment: .leading)
                                        }
 
 
@@ -271,8 +269,6 @@ struct SkinProductsView: View {
                                                        .aspectRatio(contentMode: .fit)
                                                        .frame(width: 120, height: 120)
                                                }
-        //                                        .buttonStyle(PlainButtonStyle())
-        //                                        .opacity(1)
                                        }
 
                                        VStack{
@@ -283,13 +279,13 @@ struct SkinProductsView: View {
                                                .font(.custom("Livvic-SemiBold", size: 12))
                                                .foregroundColor(Color("Black"))
                                                .padding(.top, 10)
-                                               .padding(.leading, 10)
+                                               .frame(width: 150, height: 70, alignment: .leading)
 
                                            Text(skinproduct.category)
                                                .font(.custom("Livvic-Regular", size: 15))
                                                .foregroundColor(Color("Black"))
-                                               .padding(.top, -10)
-                                               .padding(.leading, -70)
+                                               .padding(.top, -30)
+                                               .frame(width: 150, height: 50, alignment: .leading)
                                        }
                                    }
 

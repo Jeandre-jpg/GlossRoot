@@ -30,8 +30,8 @@ struct AiTabBarView : View  {
     var body : some View {
         ZStack(alignment: .center) {
             VerticalView(optionSelected: self.$optionSelected)
-                .padding(.vertical, 65)
-                .frame(width: 60, height: 350)
+                .padding(.vertical, 55)
+                .frame(width: 60, height: 250)
                
 
 
@@ -52,12 +52,12 @@ struct VerticalView : View {
     @Binding var optionSelected : Int
 
     var body : some View {
-        VStack {
+        ZStack {
             VStack {
                 Button(action: {
                     self.optionSelected = 4
                 }) {
-                    VStack(spacing: 20){
+                    VStack(spacing: 10){
                         Text("SCAN")
                             .rotationEffect(Angle(degrees: 270))
                             .font(.custom("Livvic-Regular", size: 10))
@@ -87,22 +87,24 @@ struct VerticalView : View {
                 }.foregroundColor(self.optionSelected == 5 ? .brown : .brown)
 
                 Spacer()
-                    .frame(height: 15)
+                    .frame(height: 20)
 
                 Button(action: {
                     self.optionSelected = 6
                 }) {
                     VStack(spacing: 10){
-                        Text("TRACK")
+                        Text("GUIDE")
                             .rotationEffect(Angle(degrees: 270))
                             .font(.custom("Livvic-Regular", size: 10))
                             .foregroundColor(Color("Black"))
                             .padding(10)
                             .tracking(1)
+                           
                     }
                 }.foregroundColor(self.optionSelected == 6 ? .brown : .brown)
 
             }
+            
         }
 
     }

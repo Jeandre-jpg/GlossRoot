@@ -70,7 +70,7 @@ struct BoardingRegister: View {
                                 
                                 
                                 Text(screen.description)
-                                    .font(.custom("Livvic-Regular", size: 12))
+                                    .font(.custom("Livvic-Regular", size: 13))
                                     .foregroundColor(Color("Black"))
                                     .multilineTextAlignment(.center)
                                     .padding(.top, 5)
@@ -100,7 +100,7 @@ struct BoardingRegister: View {
                 VStack(spacing: 10){
                     
                     Spacer()
-                        .frame(height: 150)
+                        .frame(height: 155)
                     
                     VStack{
                         
@@ -111,7 +111,7 @@ struct BoardingRegister: View {
                                 .padding(.leading)
                             
                             Text("Let's do it")
-                                .font(.custom("DreamAvenue", size: 12))
+                                .font(.custom("DreamAvenue", size: 20))
                                 .foregroundColor(Color("Grey"))
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 0)
@@ -122,20 +122,18 @@ struct BoardingRegister: View {
                                 .padding(.trailing)
                             
                         }
-                        .padding(.top, 120)
+                        .padding(.top, 100)
                         
                     }//VStack
-                   
                     
-                    
-                    
+                 
                     
                     Text("Name *")
                         .font(.custom("Livvic-Medium", size: 15))
                         .foregroundColor(Color("Brown"))
                         .padding(.top, 30)
                         .padding(.leading, -170)
-                        .padding(.bottom, -10)
+                   
                     
                     
                     TextField("Nameame", text: $name)
@@ -145,7 +143,7 @@ struct BoardingRegister: View {
                         .padding(.all, 20)
                         .border(Color("Grey"))
                         .opacity(0.7)
-                    
+                        .padding(.bottom, 5)
                         .frame(width: 350, height: 70)
                     
                     
@@ -153,9 +151,8 @@ struct BoardingRegister: View {
                     Text("Surname *")
                         .font(.custom("Livvic-Medium", size: 15))
                         .foregroundColor(Color("Brown"))
-                        .padding(.top, 5)
                         .padding(.leading, -170)
-                        .padding(.bottom, -10)
+                      
                     
                     
                     TextField("Surname", text: $surname)
@@ -165,17 +162,13 @@ struct BoardingRegister: View {
                         .padding(.all, 20)
                         .border(Color("Grey"))
                         .opacity(0.7)
-                    
                         .frame(width: 350, height: 70)
                     
                     
                     Text("Email Adress *")
                         .font(.custom("Livvic-Medium", size: 15))
                         .foregroundColor(Color("Brown"))
-                        .padding(.top, 5)
                         .padding(.leading, -170)
-                        .padding(.bottom, -10)
-                    
                     
                     TextField("Email Adress", text: $email)
                         .font(.custom("Livvic-Medium", size: 12))
@@ -187,30 +180,8 @@ struct BoardingRegister: View {
                         .frame(width: 350, height: 70)
                     
                     
-                    
-                    Button{
-                        offset = min(offset + getScreenBounds().width, getScreenBounds().width * 3)
-                        
-                    }label: {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color("Brown"))
-                                .frame(width: 350, height: 50)
-                                .padding(.top, 20)
-                                .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                            
-                            
-                            Text("Next")
-                                .font(.custom("Livvic-SemiBoldItalic", size: 15))
-                                .foregroundColor(Color("White"))
-                                .padding(.top, 20)
-                                .multilineTextAlignment(.center)
-                            
-                            
-                        }//ZStack
-                    }//Button
-                    .disabled(username.isEmpty || surname.isEmpty || email.isEmpty)
-                    
+                
+                 
                     
                     
                     Button{
@@ -226,8 +197,8 @@ struct BoardingRegister: View {
                                 .font(.custom("Livvic-Regular", size: 12))
                                 .foregroundColor(Color("Black"))
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 10)
-                                .padding(.bottom, 10)
+                                .padding(.top, 30)
+                               
                         })
                         
                     }//Button
@@ -236,6 +207,8 @@ struct BoardingRegister: View {
             }else if getIndex() == 1{
                 
                 VStack(spacing: 10){
+                    
+                  
                     
                     Spacer()
                         .frame(height: 250)
@@ -260,7 +233,7 @@ struct BoardingRegister: View {
                                         .foregroundColor(Color("Brown"))
                                         .padding(.top, 5)
                                         .padding(.leading, -75)
-                                        .padding(.bottom, -5)
+                                     
                                     
                                     HStack{
                                         
@@ -313,8 +286,7 @@ struct BoardingRegister: View {
                                         .foregroundColor(Color("Brown"))
                                         .padding(.top, 5)
                                         .padding(.leading, -70)
-                                        .padding(.bottom, -5)
-                                    
+                                      
                                     HStack{
                                         
                                         
@@ -351,7 +323,7 @@ struct BoardingRegister: View {
                         }
                         .padding(.top, 5)
                         .padding(.leading, -20)
-                        .padding(.bottom, -5)
+                        .padding(.bottom, 5)
                         
                         
                         
@@ -359,8 +331,7 @@ struct BoardingRegister: View {
                             .font(.custom("Livvic-Medium", size: 15))
                             .foregroundColor(Color("Brown"))
                             .padding(.leading, -170)
-                            .padding(.bottom, -10)
-                            .padding(.top, 15)
+                  
                         
                         
                         SecureField("Password", text: $password)
@@ -368,7 +339,7 @@ struct BoardingRegister: View {
                             .foregroundColor(Color("Black"))
                             .multilineTextAlignment(.leading)
                             .padding(.all, 20)
-                            .padding(.top, 5)
+                        
                             .border(Color("Grey"))
                             .opacity(0.7)
                             .frame(width: 350, height: 70)
@@ -378,7 +349,6 @@ struct BoardingRegister: View {
                             .font(.custom("Livvic-Medium", size: 15))
                             .foregroundColor(Color("Brown"))
                             .padding(.leading, -170)
-                            .padding(.bottom, -10)
                         
                         
                         SecureField("Confirm Password", text: $password)
@@ -386,7 +356,7 @@ struct BoardingRegister: View {
                             .foregroundColor(Color("Black"))
                             .multilineTextAlignment(.leading)
                             .padding(.all, 20)
-                            .padding(.top, 5)
+                          
                             .border(Color("Grey"))
                             .opacity(0.7)
                             .frame(width: 350, height: 70)
@@ -394,9 +364,8 @@ struct BoardingRegister: View {
                         Text("Username *")
                             .font(.custom("Livvic-Medium", size: 15))
                             .foregroundColor(Color("Brown"))
-                            .padding(.top, 5)
                             .padding(.leading, -170)
-                            .padding(.bottom, -10)
+                 
                         
                         
                         TextField("Username", text: $username)
@@ -404,34 +373,13 @@ struct BoardingRegister: View {
                             .foregroundColor(Color("Black"))
                             .multilineTextAlignment(.leading)
                             .padding(.all, 20)
-                            .padding(.top, 5)
                             .border(Color("Grey"))
                             .opacity(0.7)
                         
                             .frame(width: 350, height: 70)
                         
-                        Button{
-                            offset = min(offset + getScreenBounds().width, getScreenBounds().width * 3)
-                            
-                        }label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color("Brown"))
-                                    .frame(width: 350, height: 50)
-                                    .padding(.top, 20)
-                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                
-                                
-                                Text("Next")
-                                    .font(.custom("Livvic-SemiBoldItalic", size: 15))
-                                    .foregroundColor(Color("White"))
-                                    .padding(.top, 20)
-                                    .multilineTextAlignment(.center)
-                                
-                                
-                            }//ZStack
-                        }//Button
-                        .disabled(username.isEmpty || password.isEmpty )
+                    
+                    
                         
                         
                     }//Button
@@ -959,27 +907,7 @@ struct BoardingRegister: View {
                             
                         }
                         
-                        Button{
-                            offset = min(offset + getScreenBounds().width, getScreenBounds().width * 3)
-                            
-                        }label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color("Brown"))
-                                    .frame(width: 350, height: 50)
-                                    .padding(.top, 20)
-                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                
-                                
-                                Text("Next")
-                                    .font(.custom("Livvic-SemiBoldItalic", size: 15))
-                                    .foregroundColor(Color("White"))
-                                    .padding(.top, 20)
-                                    .multilineTextAlignment(.center)
-                                
-                                
-                            }//ZStack
-                        }//Button
+                  
                         
                         
                         

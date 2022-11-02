@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
+
 struct DashboardView: View {
     
     @State var optionSelected = 0
@@ -36,7 +37,7 @@ struct DashboardView: View {
                 if self.optionSelected == 0 {
                     
                     
-                    HStack(spacing: 10){
+                   
                         
                         HStack(spacing: 10){
                             
@@ -51,36 +52,26 @@ struct DashboardView: View {
                                     .frame(width: 35, height: 35, alignment: .center)
                             })
                             
-                            
                             Spacer()
                             
-                            Image("spotsearch")
+                            Image("LogoMain")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .padding(1)
-                            
-                                .frame(width: 35, height: 35, alignment: .center)
-                            
-                            NavigationLink(destination:
-                                            BeautyProductsView()
-                                .navigationBarBackButtonHidden(true)){
-                                    Image("cart")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .padding(1)
-                                        .frame(width: 35, height: 35, alignment: .center)
-                                }
+                                .frame(width: 70, height: 70, alignment: .leading)
                             
                         }
                         .padding(.leading, 20)
-                        .padding(.trailing, 20)
-                    }
+                        .padding(.trailing, 10)
+                        .padding(.top, -20)
+                   
+                    
+                    
                     
                     Text("WELCOME BACK")
                         .font(.custom("Livvic-Regular", size: 12))
                         .foregroundColor(Color("Black"))
                         .padding(.leading, -170)
-                        .padding(.top, 30)
+                        .padding(.top, 10)
                     
                     Text(beauty.username)
                         .font(.custom("DreamAvenue", size: 40))
@@ -92,7 +83,7 @@ struct DashboardView: View {
                         .font(.custom("Livvic-Regular", size: 12))
                         .foregroundColor(Color("Brown"))
                         .padding(.leading, -170)
-                        .padding(.top, 20)
+                        .padding(.top, -10)
                     
                     HStack(spacing: 20){
                         
@@ -109,9 +100,56 @@ struct DashboardView: View {
                             
                             
                         }.padding(.leading, 10)
-      
                     }
                     
+                    
+                    
+                    ScrollView(.vertical, showsIndicators: false){
+                        
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 30)
+                                .fill(Color("White"))
+                                .frame(width: 370, height: 180)
+                                .padding(.top, 10)
+                   
+                            HStack{
+                                Text("Skin Creamery Slow Beauty Collection")
+                                    .font(.custom("Livvic-Regular", size: 17))
+                                    .foregroundColor(Color("Brown"))
+                                    .padding(.leading, -2)
+                                    .padding(.top, -60)
+                              
+                                NavigationLink(destination:
+                                                BeautyProductsView()
+                                    .navigationBarBackButtonHidden(true)){
+                                        Image("eye")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .padding(1)
+                                            .frame(width: 25, height: 25, alignment: .center)
+                                            .padding(.top, -65)
+                                            .padding(.leading, 15)
+                                    }
+                            }
+                            
+                            Text("This set contains: 1x 15ml Wildflower Water-Cream (a multipurpose beauty elixir), 1x 15ml Facial Hydrating Oil (an omega elixir, for dewy, radiant skin) and a 1x 15ml Deep Cleansing Powder (cleanses and purifies from deep within pores without drying the skin).")
+                                .font(.custom("Livvic-Regular", size: 12))
+                                .foregroundColor(Color("Brown"))
+                                .padding(.leading, -20)
+                                .padding(.top, 20)
+                                .frame(width: 300)
+                            
+                            Image("rating")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .padding(1)
+                                .frame(width: 15, height: 15, alignment: .center)
+                                .padding(.top, 130)
+                                .padding(.leading, 215)
+                        }
+                        
+                    }
+                    .padding(.top, -10)
            
 
                     
@@ -143,11 +181,11 @@ struct DashboardView: View {
             .padding(.top, 10)
         }
         .onAppear{
-            
+
             FirestoreViewModel.fetchUser(uid: Auth.auth().currentUser?.uid ?? "", onSuccess: {user in
                 self.beauty = user
             })
-            
+
             Auth.auth().addStateDidChangeListener{auth, user in
                 if user == nil {
                     userIsLoggedIn.toggle()

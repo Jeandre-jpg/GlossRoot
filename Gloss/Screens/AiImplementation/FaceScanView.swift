@@ -36,233 +36,238 @@ struct FaceScanView: View {
     
     var body: some View {
         
-        
-        VStack{
-            
-            HStack(spacing: 10){
-                ZStack{
-                    NavigationLink(destination:
-                                    DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
-                        .navigationBarBackButtonHidden(true)){
-                            
-                            Image("back")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 35, height: 10, alignment: .center)
-                            
-                        }
-                    
-                }.offset(x: -150, y: 100)
-            }
-            
-            
-            Image("Ai")
-            
-                .aspectRatio(contentMode: .fit)
-                .padding(.top, 350)
-                .frame(width: 350, height: 350, alignment: .center)
-            
-         
-            
+        ZStack{
+            Color("Pink")
+                .ignoresSafeArea()
             VStack{
                 
+                HStack{
+                    ZStack{
+                        NavigationLink(destination:
+                                        DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
+                            .navigationBarBackButtonHidden(true)){
+                                
+                                Image("back")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 10, alignment: .center)
+                                  
+                                
+                            }
+                        
+                    }.offset(x: -150, y: 100)
+                }
+                .padding(.top, -50)
                 
-                VStack(spacing: 10){
+                
+                
+                Image("Ai")
+                
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.top, 275)
+                    .frame(width: 300, height: 300, alignment: .center)
+                
+                
+                
+                VStack{
+                    
                     
                     VStack(spacing: 10){
                         
-                        Button(action: {
-                            self.showSheet = true
-
-                        }, label: {
-                            Image("camera")
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 50, height: 50, alignment: .center)
-                        }).padding()
-                            .actionSheet(isPresented: $showSheet) {
-                                ActionSheet(title: Text("Select Photo"), message: Text("Choose"), buttons: [
-                                    .default(Text("Photo Library")) {
-                                        self.showImagePicker = true
-                                        self.sourceType = .photoLibrary
-                                    },
-                                    .default(Text("Camera")) {
-                                        self.showImagePicker = true
-                                        self.sourceType = .camera
-                                    },
-                                    .cancel()
-                                ])
-                            }
-                        
-                   
-                        
-                    }
-                    .padding(.top, 450)
-                    .frame(width: 50, height: 50, alignment: .center)
-                    
-                    
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(Color("White"))
-                        .frame(width: 350, height: 160)
-                        .padding(.top, 200)
-                    
-                    VStack{
-                        
-                        
-                        
-                        Text("Let's get you set up!")
-                            .font(.custom("DreamAvenue", size: 25))
-                            .foregroundColor(Color("Black"))
-                            .multilineTextAlignment(.center)
-                            .padding(.top, -140)
-                        
-                        
-                        Text("Please scan your beautiful face within our borders")
-                            .font(.custom("Livvic-Regular", size: 12))
-                            .foregroundColor(Color("Black"))
-                            .multilineTextAlignment(.center)
-                            .padding(.top, -110)
-                        
-                        
-                    }
-                    
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(Color("Pink"))
-                        .frame(width: 350, height: 70)
-                        .padding(.top, -80)
-                    
-                    HStack(spacing: 20){
-                        
-                        
-                        Button(action:{
+                        VStack(spacing: 10){
                             
-                         
+                            Button(action: {
+                                self.showSheet = true
+                                
+                            }, label: {
+                                Image("camera")
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 75, height: 75, alignment: .center)
+                            }).padding()
+                                .actionSheet(isPresented: $showSheet) {
+                                    ActionSheet(title: Text("Select Photo"), message: Text("Choose"), buttons: [
+                                        .default(Text("Photo Library")) {
+                                            self.showImagePicker = true
+                                            self.sourceType = .photoLibrary
+                                        },
+                                        .default(Text("Camera")) {
+                                            self.showImagePicker = true
+                                            self.sourceType = .camera
+                                        },
+                                        .cancel()
+                                    ])
+                                }
                             
-                            if let img = self.image{
-                                self.classifier?.classify(img){result in
-                                    self.classLabel = result
-                                    print(result)
-             
+                            
+                            
+                        }
+                        .padding(.top, 175)
+                        .frame(width: 75, height: 75, alignment: .center)
+                        
+                        
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color("White"))
+                            .frame(width: 350, height: 160)
+                            .padding(.top, 80)
+                        
+                        VStack{
+                            
+                            
+                            
+                            Text("Let's get you set up!")
+                                .font(.custom("DreamAvenue", size: 25))
+                                .foregroundColor(Color("Black"))
+                                .multilineTextAlignment(.center)
+                                .padding(.top, -140)
+                            
+                            
+                            Text("Please scan your beautiful face within our borders")
+                                .font(.custom("Livvic-Regular", size: 12))
+                                .foregroundColor(Color("Black"))
+                                .multilineTextAlignment(.center)
+                                .padding(.top, -110)
+                            
+                            
+                        }
+                        
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color("Pink"))
+                            .frame(width: 350, height: 70)
+                            .padding(.top, -80)
+                        
+                        HStack(spacing: 20){
+                            
+                            
+                            Button(action:{
+                                
+                                
+                                
+                                if let img = self.image{
+                                    self.classifier?.classify(img){result in
+                                        self.classLabel = result
+                                        print(result)
+                                        
+                                    }
+                                    
+                                    self.department?.classify(img){result in
+                                        self.departmentLabel = result
+                                        print(result)
+                                        
+                                    }
                                 }
                                 
-                                self.department?.classify(img){result in
-                                    self.departmentLabel = result
-                                    print(result)
-             
-                                }
-                            }
-                         
-                            self.showsBlob = true
-                        }, label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color("Brown"))
-                                    .frame(width: 150, height: 50)
-                                    .padding(.top, 120)
-                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                
-                                
-                                Text("Classify Me")
-                                    .font(.custom("Livvic-SemiBoldItalic", size: 15))
-                                    .foregroundColor(Color("White"))
-                                    .padding(.top, 120)
-                                    .multilineTextAlignment(.center)
-                                
-                                
-                            }//ZStack
-                        })//Button
-                        
-                        Button{
-                            
-                        }label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color("Brown"))
-                                    .frame(width: 150, height: 50)
-                                    .padding(.top, 120)
-                                    .shadow(color: .gray, radius: 5, x: 0, y: 5)
-                                
-                                
-                                Text("Beauty Care")
-                                    .font(.custom("Livvic-SemiBoldItalic", size: 15))
-                                    .foregroundColor(Color("White"))
-                                    .padding(.top, 120)
-                                    .multilineTextAlignment(.center)
-                                
-                                
-                            }//ZStack
-                        }//Button
-                    }
-                    .padding(.top, -200)
-                }
-                
-                
-                
-                
-            }//VStack
-            .frame(width: getScreenBounds().width)
-            .frame(maxHeight: .infinity)
-            
-      
-            if showsBlob {
-                
-                VStack{
-                    ZStack{
-                        Image("BlobAi")
-                            .frame(width: 300, height: 300, alignment: .center)
-                            .padding(.top, -870)
-                        
-                        Text(classLabel)
-                            .font(.custom("Livvic-Medium", size: 15))
-                            .foregroundColor(Color("Black"))
-                            .padding(10)
-                            .padding(.top, -760)
-                        
-                        Text(departmentLabel)
-                            .font(.custom("Livvic-Medium", size: 15))
-                            .foregroundColor(Color("Black"))
-                            .padding(10)
-                            .padding(.top, 10)
-                            .padding(.top, -740)
-                        
-                        NavigationLink(destination:
-                                        SkinConcernView(beautyFilter2: .constant(classLabel))
-                            .navigationBarBackButtonHidden(true)){
-                                
+                                self.showsBlob = true
+                            }, label: {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 30)
                                         .fill(Color("Brown"))
                                         .frame(width: 150, height: 50)
-                                        .padding(.top, 120)
+                                        .padding(.top, 75)
+                                        .shadow(color: .gray, radius: 5, x: 0, y: 5)
                                     
                                     
-                                    
-                                    Text("My Products")
+                                    Text("Classify Me")
                                         .font(.custom("Livvic-SemiBoldItalic", size: 15))
                                         .foregroundColor(Color("White"))
-                                        .padding(.top, 120)
+                                        .padding(.top, 75)
                                         .multilineTextAlignment(.center)
                                     
                                     
                                 }//ZStack
-                                
-                            }.padding(.top, -790)
-                        
+                            })//Button
+                            
+                            NavigationLink(destination:
+                                            FaceFilterView()
+                                .navigationBarBackButtonHidden(true)){
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .fill(Color("Brown"))
+                                        .frame(width: 150, height: 50)
+                                        .padding(.top, 75)
+                                        .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                                    
+                                    
+                                    Text("Beautify Me")
+                                        .font(.custom("Livvic-SemiBoldItalic", size: 15))
+                                        .foregroundColor(Color("White"))
+                                        .padding(.top, 75)
+                                        .multilineTextAlignment(.center)
+                                    
+                                    
+                                }//ZStack
+                            }
+                        }
+                        .padding(.top, -155)
+                    }
+                    
+                    
+                    
+                    
+                }//VStack
+                .frame(width: getScreenBounds().width)
+                .frame(maxHeight: .infinity)
+                
+                
+                if showsBlob {
+                    
+                    VStack{
+                        ZStack{
+                            Image("BlobAi")
+                                .frame(width: 300, height: 300, alignment: .center)
+                                .padding(.top, -770)
+                            
+                            Text(classLabel)
+                                .font(.custom("Livvic-Medium", size: 15))
+                                .foregroundColor(Color("Black"))
+                                .padding(10)
+                                .padding(.top, -660)
+                            
+                            Text(departmentLabel)
+                                .font(.custom("Livvic-Medium", size: 15))
+                                .foregroundColor(Color("Black"))
+                                .padding(10)
+                                .padding(.top, 10)
+                                .padding(.top, -640)
+                            
+                            NavigationLink(destination:
+                                            SkinConcernView(beautyFilter2: .constant(classLabel))
+                                .navigationBarBackButtonHidden(true)){
+                                    
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 30)
+                                            .fill(Color("Brown"))
+                                            .frame(width: 150, height: 50)
+                                            .padding(.top, 120)
+                                        
+                                        
+                                        
+                                        Text("My Products")
+                                            .font(.custom("Livvic-SemiBoldItalic", size: 15))
+                                            .foregroundColor(Color("White"))
+                                            .padding(.top, 120)
+                                            .multilineTextAlignment(.center)
+                                        
+                                        
+                                    }//ZStack
+                                    
+                                }.padding(.top, -690)
+                            
+                        }
                     }
                 }
+                
             }
-
+            .sheet(isPresented: $showImagePicker) {
+                ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
+            }
+            
+            .frame(width: getScreenBounds().width)
+            .frame(maxHeight: .infinity)
+            .background( Image(uiImage: image ?? UIImage(named: "faceai")!)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea())
         }
-        .sheet(isPresented: $showImagePicker) {
-            ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
-        }
-        
-        .frame(width: getScreenBounds().width)
-        .frame(maxHeight: .infinity)
-        .background( Image(uiImage: image ?? UIImage(named: "faceai")!)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .ignoresSafeArea())
-        
         
     }
 }

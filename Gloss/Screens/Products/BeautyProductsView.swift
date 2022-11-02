@@ -41,28 +41,10 @@ struct BeautyProductsView: View {
                     .frame(width: 35, height: 35, alignment: .center)
             })
 
-
             Spacer()
-
-            Image("spotsearch")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .padding(1)
-                .frame(width: 35, height: 35, alignment: .center)
-
-            NavigationLink(destination:
-                            BeautyProductsView()
-                .navigationBarBackButtonHidden(true)){
-                    Image("cart")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .padding(1)
-                        .frame(width: 35, height: 35, alignment: .center)
-                }
-                    
                 }
                 .padding(.leading, 20)
-                .padding(.trailing, 20)
+               
                 
                 Text("BASED ON YOUR")
                     .font(.custom("Livvic-Regular", size: 12))
@@ -240,7 +222,7 @@ struct BeautyProductsView: View {
                                 
                                     ZStack{
                                         NavigationLink(destination:
-                                                        BeautyDetailView(beautyproduct: beautyproduct)
+                                                        BeautyDetailView( beautyproduct2: beautyproduct)
                                             .navigationBarBackButtonHidden(true)){
                                                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                                                     .fill(Color("White"))
@@ -264,21 +246,20 @@ struct BeautyProductsView: View {
                                         Text(beautyproduct.name)
                                             .font(.custom("Livvic-SemiBold", size: 12))
                                             .foregroundColor(Color("Black"))
-                                            .padding(.top, 10)
-                                            .padding(.leading, -10)
+                                            .frame(width: 150, height: 70, alignment: .leading)
                                         
                                         Text(beautyproduct.category)
                                             .font(.custom("Livvic-Regular", size: 15))
                                             .foregroundColor(Color("Black"))
-                                            .padding(.top, -10)
-                                            .padding(.leading, -70)
+                                            .padding(.top, -20)
+                                            .frame(width: 150, height: 50, alignment: .leading)
                                     }
                                 
                             }else if beautyproduct.category == beautyFilter{
                                 VStack{
                                     ZStack{
                                         NavigationLink(destination:
-                                                        BeautyDetailView(beautyproduct: beautyproduct)
+                                                        BeautyDetailView(beautyproduct2: beautyproduct)
                                             .navigationBarBackButtonHidden(true)){
                                                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                                                     .fill(Color("White"))
@@ -303,13 +284,13 @@ struct BeautyProductsView: View {
                                             .font(.custom("Livvic-SemiBold", size: 12))
                                             .foregroundColor(Color("Black"))
                                             .padding(.top, 10)
-                                            .padding(.leading, -10)
+                                            .frame(width: 150, height: 50, alignment: .leading)
                                         
                                         Text(beautyproduct.category)
                                             .font(.custom("Livvic-Regular", size: 15))
                                             .foregroundColor(Color("Black"))
-                                            .padding(.top, -10)
-                                            .padding(.leading, -70)
+                                            .padding(.top, -30)
+                                            .frame(width: 150, height: 50, alignment: .leading)
                                     }
                                 }
                             }

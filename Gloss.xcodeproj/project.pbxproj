@@ -29,8 +29,8 @@
 		3C263E7C28F307E000927835 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C263E7B28F307E000927835 /* LoginView.swift */; };
 		3C2BC9152905F230008601AD /* BeautyProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BC9142905F230008601AD /* BeautyProductsView.swift */; };
 		3C3E8E2728FB7F9D00C55343 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E8E2628FB7F9D00C55343 /* EditView.swift */; };
-		3C53D80E29085CF200DBFA43 /* BeautyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53D80D29085CF200DBFA43 /* BeautyDetailView.swift */; };
 		3C53D81429086E4800DBFA43 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53D81329086E4800DBFA43 /* TutorialView.swift */; };
+		3C5A17552912A03D008ECF83 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A17542912A03D008ECF83 /* GifImage.swift */; };
 		3C5F0E7A29068D3700AE0727 /* SkinProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F0E7929068D3700AE0727 /* SkinProductsView.swift */; };
 		3C5F0E7F2906FECD00AE0727 /* Skinproducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F0E7E2906FECD00AE0727 /* Skinproducts.swift */; };
 		3C5F0E812907002D00AE0727 /* SkinproductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F0E802907002D00AE0727 /* SkinproductsViewModel.swift */; };
@@ -46,9 +46,7 @@
 		3C6B536928FD92E0008E5653 /* AiTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B536828FD92E0008E5653 /* AiTabBarView.swift */; };
 		3C7C4F5428FDBF2900AE38C5 /* GlossifyMLClass.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C4F5328FDBF2900AE38C5 /* GlossifyMLClass.mlmodel */; };
 		3C7C4F5628FDE77200AE38C5 /* SkinConcernsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C4F5528FDE77200AE38C5 /* SkinConcernsClass.swift */; };
-		3C9F03552911A3B9004D5C81 /* YourProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9F03542911A3B9004D5C81 /* YourProducts.swift */; };
 		3C9F03572911B172004D5C81 /* SkinConcernView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9F03562911B172004D5C81 /* SkinConcernView.swift */; };
-		3CAA5A9128FB02A900A901B5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAA5A9028FB02A900A901B5 /* FirebaseAnalytics */; };
 		3CAA5A9328FB02A900A901B5 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAA5A9228FB02A900A901B5 /* FirebaseAppCheck */; };
 		3CAA5A9528FB02A900A901B5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAA5A9428FB02A900A901B5 /* FirebaseAuth */; };
 		3CAA5A9728FB02A900A901B5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAA5A9628FB02A900A901B5 /* FirebaseCrashlytics */; };
@@ -58,6 +56,7 @@
 		3CB4262528E9E00100EEE1A7 /* DreamAvenue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4262428E9DFF700EEE1A7 /* DreamAvenue.otf */; };
 		3CB4262728E9E5F600EEE1A7 /* Boarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4262628E9E5F600EEE1A7 /* Boarding.swift */; };
 		3CB4262B28E9E84500EEE1A7 /* OffsetTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4262A28E9E84500EEE1A7 /* OffsetTab.swift */; };
+		3CBA70132912F37E0090DA91 /* BeautyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA70122912F37E0090DA91 /* BeautyDetailView.swift */; };
 		3CC5A646290724A20052408B /* SkinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5A645290724A20052408B /* SkinDetailView.swift */; };
 		3CC5A64829072CAA0052408B /* BeautyproductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5A64729072CA90052408B /* BeautyproductsViewModel.swift */; };
 		3CC5A64A29072D250052408B /* Beautyproducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5A64929072D240052408B /* Beautyproducts.swift */; };
@@ -89,8 +88,8 @@
 		3C263E7B28F307E000927835 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3C2BC9142905F230008601AD /* BeautyProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyProductsView.swift; sourceTree = "<group>"; };
 		3C3E8E2628FB7F9D00C55343 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
-		3C53D80D29085CF200DBFA43 /* BeautyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyDetailView.swift; sourceTree = "<group>"; };
 		3C53D81329086E4800DBFA43 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		3C5A17542912A03D008ECF83 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		3C5F0E7929068D3700AE0727 /* SkinProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinProductsView.swift; sourceTree = "<group>"; };
 		3C5F0E7E2906FECD00AE0727 /* Skinproducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skinproducts.swift; sourceTree = "<group>"; };
 		3C5F0E802907002D00AE0727 /* SkinproductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinproductsViewModel.swift; sourceTree = "<group>"; };
@@ -105,12 +104,12 @@
 		3C6B536828FD92E0008E5653 /* AiTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiTabBarView.swift; sourceTree = "<group>"; };
 		3C7C4F5328FDBF2900AE38C5 /* GlossifyMLClass.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GlossifyMLClass.mlmodel; sourceTree = "<group>"; };
 		3C7C4F5528FDE77200AE38C5 /* SkinConcernsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinConcernsClass.swift; sourceTree = "<group>"; };
-		3C9F03542911A3B9004D5C81 /* YourProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProducts.swift; sourceTree = "<group>"; };
 		3C9F03562911B172004D5C81 /* SkinConcernView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinConcernView.swift; sourceTree = "<group>"; };
 		3CAA5A9E28FB594400A901B5 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3CB4262428E9DFF700EEE1A7 /* DreamAvenue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreamAvenue.otf; sourceTree = "<group>"; };
 		3CB4262628E9E5F600EEE1A7 /* Boarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boarding.swift; sourceTree = "<group>"; };
 		3CB4262A28E9E84500EEE1A7 /* OffsetTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetTab.swift; sourceTree = "<group>"; };
+		3CBA70122912F37E0090DA91 /* BeautyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyDetailView.swift; sourceTree = "<group>"; };
 		3CC5A645290724A20052408B /* SkinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinDetailView.swift; sourceTree = "<group>"; };
 		3CC5A64729072CA90052408B /* BeautyproductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyproductsViewModel.swift; sourceTree = "<group>"; };
 		3CC5A64929072D240052408B /* Beautyproducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautyproducts.swift; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 				3CAA5A9728FB02A900A901B5 /* FirebaseCrashlytics in Frameworks */,
 				3CAA5A9528FB02A900A901B5 /* FirebaseAuth in Frameworks */,
 				3C633EEE29058CAD00EC4737 /* SDWebImageSwiftUI in Frameworks */,
-				3CAA5A9128FB02A900A901B5 /* FirebaseAnalytics in Frameworks */,
 				3CAA5A9B28FB02A900A901B5 /* FirebaseFirestore in Frameworks */,
 				2A20634C71C59AAC6BDFCD1B /* Pods_Gloss.framework in Frameworks */,
 			);
@@ -236,11 +234,11 @@
 			isa = PBXGroup;
 			children = (
 				3C6B535928FD31F8008E5653 /* AiImplementation */,
+				3C1D109B28E9DBA000AFC22A /* SplashView.swift */,
 				3C263E7B28F307E000927835 /* LoginView.swift */,
 				3C263E7528F2BCBC00927835 /* BoardingRegister.swift */,
 				3C1D109828E9DB9600AFC22A /* OnboardingView.swift */,
 				3C3E8E2628FB7F9D00C55343 /* EditView.swift */,
-				3C1D109B28E9DBA000AFC22A /* SplashView.swift */,
 				3C263E7328F2BB3B00927835 /* DashboardView.swift */,
 				3C5F0E7B29068DDE00AE0727 /* Products */,
 			);
@@ -250,13 +248,12 @@
 		3C5F0E7B29068DDE00AE0727 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				3C9F03562911B172004D5C81 /* SkinConcernView.swift */,
 				3C53D81329086E4800DBFA43 /* TutorialView.swift */,
 				3C5F0E7929068D3700AE0727 /* SkinProductsView.swift */,
 				3C2BC9142905F230008601AD /* BeautyProductsView.swift */,
 				3CC5A645290724A20052408B /* SkinDetailView.swift */,
-				3C53D80D29085CF200DBFA43 /* BeautyDetailView.swift */,
-				3C9F03542911A3B9004D5C81 /* YourProducts.swift */,
-				3C9F03562911B172004D5C81 /* SkinConcernView.swift */,
+				3CBA70122912F37E0090DA91 /* BeautyDetailView.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -283,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				3C6B536628FD686D008E5653 /* ImagePicker.swift */,
+				3C5A17542912A03D008ECF83 /* GifImage.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -328,7 +326,6 @@
 			);
 			name = Gloss;
 			packageProductDependencies = (
-				3CAA5A9028FB02A900A901B5 /* FirebaseAnalytics */,
 				3CAA5A9228FB02A900A901B5 /* FirebaseAppCheck */,
 				3CAA5A9428FB02A900A901B5 /* FirebaseAuth */,
 				3CAA5A9628FB02A900A901B5 /* FirebaseCrashlytics */,
@@ -469,13 +466,14 @@
 				3C7C4F5428FDBF2900AE38C5 /* GlossifyMLClass.mlmodel in Sources */,
 				3CC5A646290724A20052408B /* SkinDetailView.swift in Sources */,
 				3C1D108028E9DB6300AFC22A /* ContentView.swift in Sources */,
+				3CBA70132912F37E0090DA91 /* BeautyDetailView.swift in Sources */,
 				3C263E7428F2BB3B00927835 /* DashboardView.swift in Sources */,
+				3C5A17552912A03D008ECF83 /* GifImage.swift in Sources */,
 				3C5F0E7F2906FECD00AE0727 /* Skinproducts.swift in Sources */,
 				3C2BC9152905F230008601AD /* BeautyProductsView.swift in Sources */,
 				3C263E7628F2BCBD00927835 /* BoardingRegister.swift in Sources */,
 				3C170B8C290EB577004B195E /* SkinFilter.swift in Sources */,
 				3CB4262728E9E5F600EEE1A7 /* Boarding.swift in Sources */,
-				3C9F03552911A3B9004D5C81 /* YourProducts.swift in Sources */,
 				3C06223528FAFD450066D366 /* RegisterLoginViewModel.swift in Sources */,
 				3C7C4F5628FDE77200AE38C5 /* SkinConcernsClass.swift in Sources */,
 				3CB4262B28E9E84500EEE1A7 /* OffsetTab.swift in Sources */,
@@ -493,7 +491,6 @@
 				3C6B535B28FD322D008E5653 /* FaceScanView.swift in Sources */,
 				3C263E7828F2BCFA00927835 /* BoardRegister.swift in Sources */,
 				3C53D81429086E4800DBFA43 /* TutorialView.swift in Sources */,
-				3C53D80E29085CF200DBFA43 /* BeautyDetailView.swift in Sources */,
 				3C6B536428FD5E38008E5653 /* UIImageService.swift in Sources */,
 				3C6B536728FD686D008E5653 /* ImagePicker.swift in Sources */,
 				3CC5A64829072CAA0052408B /* BeautyproductsViewModel.swift in Sources */,
@@ -738,11 +735,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3C633EEC29058CAD00EC4737 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
-		};
-		3CAA5A9028FB02A900A901B5 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3CAA5A8F28FB02A900A901B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 		3CAA5A9228FB02A900A901B5 /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;

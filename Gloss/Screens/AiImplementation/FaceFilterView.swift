@@ -11,6 +11,7 @@ import FirebaseAuth
 import SDWebImageSwiftUI
 
 
+
 struct FaceFilterView: View {
     
     @State var userIsLoggedIn: Bool = true
@@ -27,13 +28,60 @@ struct FaceFilterView: View {
             Color("Pink")
                 .ignoresSafeArea()
             
-                Image("face_place")
+            
+          
+            
+                Image("tutorialMakeup")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .ignoresSafeArea()
+                    .ignoresSafeArea(.all)
+                    .rotationEffect(Angle(degrees: 270))
+                    .overlay{
+                        ZStack{
+                            Color("Brown")
+                                .opacity(0.5)
+                                .ignoresSafeArea()
+                        }
+                    }
             
             
             VStack{
+                
+                HStack{
+                    ZStack{
+                        NavigationLink(destination:
+                                        DashboardView(beauty: Beauty(name: "", surname: "", age: 0, email: "", gender: "", skinconcern: 0, skintone: 0, skintype: 0, username: ""))
+                            .navigationBarBackButtonHidden(true)){
+                                
+                                Image("back")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 10, alignment: .center)
+                                  
+                                
+                            }
+                        
+                    }.offset(x: -150, y: 100)
+                }
+                .padding(.top, -50)
+                
+                
+                ZStack{
+                    Image("BlobAi")
+                        .resizable()
+                        .frame(width: 300, height: 250, alignment: .center)
+                        .padding(.top, -10)
+                    
+                    Text("FOLLOW OUR")
+                        .font(.custom("DreamAvenue", size: 35))
+                        .foregroundColor(Color("Brown"))
+                        .padding(.top, -20)
+                    
+                    Text("TUTORIALS")
+                        .font(.custom("DreamAvenue", size: 35))
+                        .foregroundColor(Color("Brown"))
+                        .padding(.top, 100)
+                }
                 
                 HStack{
                     NavigationLink(destination:
@@ -125,9 +173,11 @@ struct FaceFilterView: View {
                         Spacer()
                        
                     }
-                   
+                    .padding(.trailing, 350)
+                    .padding(.leading, 370)
                     
                 }
+               
              
                
                 
