@@ -1,12 +1,6 @@
 <!-- PROJECT LOGO -->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/isla-just/CuriousCreative2?color=%23FF4C54)
-![GitHub watchers](https://img.shields.io/github/watchers/isla-just/CuriousCreative2?color=%23FFA191)
-![GitHub language count](https://img.shields.io/github/languages/count/isla-just/CuriousCreative2?color=%231EBBBA)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/isla-just/CuriousCreative2?color=%234E54AD)
-
-
 <h6 align="center">Jeandrè De Villiers 190025 DV 300 T4</h6>
 <p align="center">
 </br>
