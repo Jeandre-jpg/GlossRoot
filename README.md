@@ -269,7 +269,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **Jeandrè De Villiers** - [@byislajust](https://github.com/Jeandre-jpg) - jeandrevd0@gmail.com
+* **Jeandrè De Villiers** - (https://github.com/Jeandre-jpg) - jeandrevd0@gmail.com
 * **Project Link** - https://github.com/Jeandre-jpg/GlossRoot
 
 <!-- ACKNOWLEDGEMENTS -->
